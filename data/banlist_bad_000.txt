@@ -1,0 +1,680 @@
+
+base
+	darthfighter3947826557
+		key = "darthfighter"
+		id = "3947826557"
+		ip = null
+		reason = "Website spambot"
+		bannedby = "hoknar"
+		temp = 0
+	tristan632470035605
+		key = "tristan63"
+		id = "2470035605"
+		ip = null
+		reason = "See server notes"
+		bannedby = "hoknar"
+		temp = 0
+	8123tom472096303
+		key = "8123tom"
+		id = "472096303"
+		ip = "84.110.193.130"
+		reason = "Two witnesses confirm serious grief in two rounds. "
+		bannedby = "mcbeard"
+		temp = 0
+	nasicoleror1515361056
+		key = "nasicoleror"
+		id = "1515361056"
+		ip = "139.174.194.132"
+		reason = "For obvious reasons."
+		bannedby = "mcbeard"
+		temp = 0
+	buckmaster353827157820
+		key = "buckmaster35"
+		id = "3827157820"
+		ip = "96.33.188.203"
+		reason = "Antagging as a non-antag, lying to admins (very carefully confirmed via log-checking and conferring with other players, despite excuses and claims otherwise)"
+		bannedby = "mcbeard"
+		temp = 0
+	xinitrousx4114224471
+		key = "xinitrousx"
+		id = "4114224471"
+		ip = "108.25.100.184"
+		reason = "Griefer"
+		bannedby = "hoknar"
+		temp = 0
+	makbot33886319491
+		key = "makbot3"
+		id = "3886319491"
+		ip = "92.126.228.130"
+		reason = "Griefer - Multipe accounts - Refusing to talk to admin"
+		bannedby = "hoknar"
+		temp = 0
+	govno13886319491
+		key = "govno1"
+		id = "3886319491"
+		ip = "92.126.228.130"
+		reason = "Griefer - Multipe accounts - Refusing to talk to admin"
+		bannedby = "hoknar"
+		temp = 0
+	yoloforme1627910017
+		key = "yoloforme"
+		id = "1627910017"
+		ip = "78.150.18.227"
+		reason = "Griefed by blowing up a welder tank in the bar. Threatened an admin when the issue was discussed."
+		bannedby = "mcbeard"
+		temp = 0
+	darkxnigg2580381238
+		key = "darkxnigg"
+		id = "2580381238"
+		ip = "216.58.59.19"
+		reason = "Lit a plasma fire as a non-antag. When asked to explain, wasted my time with smart-ass deflection. Luuurker and Chickenfit seem to be his alts. Ban them if they show up with a different IP."
+		bannedby = "mcbeard"
+		temp = 0
+		minutes = null
+	countchaukulos647727097
+		key = "countchaukulos"
+		id = "647727097"
+		ip = "76.94.171.34"
+		reason = "Lying to admins"
+		bannedby = "hoknar"
+		temp = 0
+	unclecarter4040369764
+		key = "unclecarter"
+		id = "4040369764"
+		ip = "50.64.56.63"
+		reason = "Calling admins faggots"
+		bannedby = "hoknar"
+		temp = 0
+	nadmigger208084297
+		key = "nadmigger"
+		id = "208084297"
+		ip = "198.168.38.27"
+		reason = "Between the clearly offensive username and the fact that I logged in to see you trolling people with the word fag, you're clearly not the type of player we want here."
+		bannedby = "mcbeard"
+		temp = 0
+	kylexyicecool2955545051
+		key = "kylexyicecool"
+		id = "2955545051"
+		ip = "71.199.88.215"
+		reason = "Griefed by attacking someone for no IC reason as a non-antag. Went on a griefy murderous rampage when I was trying to talk to him about it."
+		bannedby = "mcbeard"
+		temp = 0
+	extravantgomez2260413995
+		key = "extravantgomez"
+		id = "2260413995"
+		ip = "107.130.40.195"
+		reason = "Engaging in random non-RP nonsense. Trolling admins when corrected about it and clearly having no intention of doing as asked."
+		bannedby = "mcbeard"
+		temp = 0
+	med1cjosh1421312257
+		key = "med1cjosh"
+		id = "1421312257"
+		ip = "178.76.189.187"
+		reason = "Randomly greif-murdered an AFK player and disconnected before I could talk to him. As not griefing and not messing with AFK players are both explicitly discussed in the login/roundstart announcement text, there's no excuse of ignorance or reason for clemency."
+		bannedby = "mcbeard"
+		temp = 0
+	draw113919457005
+		key = "draw11"
+		id = "3919457005"
+		ip = "72.182.54.232"
+		reason = "Helped grief-murder someone as a non-antag. Ignored me when I talked to him about it, then vented escape (full of people)."
+		bannedby = "mcbeard"
+		temp = 0
+	steezybleez2028780793
+		key = "steezybleez"
+		id = "2028780793"
+		ip = "66.169.232.140"
+		reason = "Grief-attacked someone as a non-antag. Lied about thinking he was AFK when he clearly wasn't. Disconnected while I was talking to him about it."
+		bannedby = "mcbeard"
+		temp = 0
+	melkuus1589008151
+		key = "melkuus"
+		id = "1589008151"
+		ip = "195.218.183.63"
+		reason = "Dropped a plasma fire grenade in the hallway as a non-antag. Disconnected when I tried to talk the them about it."
+		bannedby = "mcbeard"
+		temp = 0
+	assymcgee1704008311
+		key = "assymcgee"
+		id = "1704008311"
+		ip = "66.87.96.159"
+		reason = "Griefed several people for no clear reason, killing 1 of them. Promised an explanation but disconnected without giving one."
+		bannedby = "mcbeard"
+		temp = 0
+	cptrogers2061697861
+		key = "cptrogers"
+		id = "2061697861"
+		ip = "74.4.34.89"
+		reason = "Shut off power and tried to rig the engine to blow as an engineer, then spaced himself. Wouldn't respond to admin questions."
+		bannedby = "mcbeard"
+		temp = 0
+	gizig1613048586
+		key = "gizig"
+		id = "1613048586"
+		ip = "79.105.169.33"
+		reason = "Logged in and just started doing lolsy random things, sharing Captain gear with an officer who shared his IP, smashing his display case, shooting each other etc. Refused to respond to multiple admin PMs."
+		bannedby = "mcbeard"
+		temp = 0
+	vladimir19992222265997
+		key = "vladimir1999"
+		id = "2222265997"
+		ip = "79.105.169.33"
+		reason = "Logged in and just started doing lolsy random things, putting on Captain gear given by a Captain who shared his IP, shooting each other etc. Refused to respond to multiple admin PMs."
+		bannedby = "mcbeard"
+		temp = 0
+	tacticool2663731199
+		key = "tacticool"
+		id = "2663731199"
+		ip = "187.153.36.175"
+		reason = "Griefer"
+		bannedby = "hoknar"
+		temp = 0
+	ignoredone2663731199
+		key = "ignoredone"
+		id = "2663731199"
+		ip = "187.153.36.175"
+		reason = "Griefer"
+		bannedby = "hoknar"
+		temp = 0
+	plasmagladiator1113704153
+		key = "plasmagladiator"
+		id = "1113704153"
+		ip = "85.176.125.36"
+		reason = "Griefer"
+		bannedby = "hoknar"
+		temp = 0
+	panser1493516031
+		key = "panser"
+		id = "1493516031"
+		ip = "142.196.32.210"
+		reason = "Griefer"
+		bannedby = "hoknar"
+		temp = 0
+	immaassassin1978366267
+		key = "immaassassin"
+		id = "1978366267"
+		ip = "174.106.41.184"
+		reason = "Insulting admins, saying we are injuring him and giving him a heart attack by not banning people he doesn't like.. Then logged off while I was talking to him."
+		bannedby = "hoknar"
+		temp = 0
+	blackheartkabal174158829929
+		key = "blackheartkabal17"
+		id = "4158829929"
+		ip = "24.88.101.49"
+		reason = "Detonated a welder bomb in the hallway. Claimed to have been bribed by someone with a grudge OOC."
+		bannedby = "mcbeard"
+		temp = 0
+	rugg1357434296
+		key = "rugg"
+		id = "1357434296"
+		ip = "72.0.129.58"
+		reason = "Griefer - Killed and gibbed for no reason."
+		bannedby = "hoknar"
+		temp = 0
+	dicktwitcher829362987
+		key = "dicktwitcher"
+		id = "829362987"
+		ip = "188.25.174.193"
+		reason = "Run of the mill griefing asshole."
+		bannedby = "mcbeard"
+		temp = 0
+	vladimir15249661880
+		key = "vladimir15"
+		id = "249661880"
+		ip = "83.220.239.58"
+		reason = "Griefed, then sent me nonsense and disconnected."
+		bannedby = "mcbeard"
+		temp = 0
+	crypticoutsider1524063647
+		key = "crypticoutsider"
+		id = "1524063647"
+		ip = "72.225.9.187"
+		reason = "Griefer, first offence is listed, second offence: jumped into space with a 'train of people'."
+		bannedby = "quarintinesnipr"
+		temp = 0
+	uitary3525439472
+		key = "uitary"
+		id = "3525439472"
+		ip = "24.112.194.178"
+		reason = "Clearly a troll. Bragged about being banned from other servers, engaged in random griefy behaviour, joked about rape and refused to take the subject seriously, all in his first 15 minutes on the server. Clearly not somebody we want around."
+		bannedby = "mcbeard"
+		temp = 0
+	piejoe212402159183
+		key = "piejoe21"
+		id = "2402159183"
+		ip = "99.62.102.63"
+		reason = "Racists/Antisemitic/Abusive language. Also used Harm Baton."
+		bannedby = "hoknar"
+		temp = 0
+	tasia9696180782313
+		key = "tasia9696"
+		id = "180782313"
+		ip = "24.168.20.10"
+		reason = "Spammer - If you are an actual player and not a spam bot and want to play: Feel free to appeal on our forums."
+		bannedby = "hoknar"
+		temp = 0
+	qystrix272563380
+		key = "qystrix"
+		id = "272563380"
+		ip = "23.255.226.49"
+		reason = "Murdered someone for no reason as a non-antag. When I went to talk to you about it you had logged out. If you wish to discuss this make a forum post under the appeals forum."
+		bannedby = "hoknar"
+		temp = 0
+	stepura3099132999
+		key = "stepura"
+		id = "3099132999"
+		ip = "193.151.14.5"
+		reason = "Random griefing, then refusing to respond and disconnecting when talked to by an admin."
+		bannedby = "mcbeard"
+		temp = 0
+	nizarius2752456371
+		key = "nizarius"
+		id = "2752456371"
+		ip = "68.225.9.27"
+		reason = "Began the shift by comitting a random crime as HoS. Was warned. Immediately began using lethal weapony against a crewmember who was asking for his arrest. Was taken out of play to stop the grief. Did not stick around to talk to an admin. "
+		bannedby = "mcbeard"
+		temp = 0
+	dra246803220956581
+		key = "dra24680"
+		id = "3220956581"
+		ip = "72.198.93.123"
+		reason = "Apparently tried to grief-murder someone by stungloving them and dragging him into an emitter. Logged off when an admin was trying to talk to him."
+		bannedby = "mcbeard"
+		temp = 0
+	snippyaw331741994
+		key = "snippyaw"
+		id = "331741994"
+		ip = "173.243.74.129"
+		reason = "Griefer. same above, but this time put polyacid"
+		bannedby = "quarintinesnipr"
+		temp = 0
+	brockington3857565417
+		key = "brockington"
+		id = "3857565417"
+		ip = "173.243.74.129"
+		reason = "Griefer. He has the same IP as another griefer and has had bad interactions with admins as you can see from the notes above. if you want to appeal this please go to the website link posted."
+		bannedby = "quarintinesnipr"
+		temp = 0
+	masterreactor2648104308
+		key = "masterreactor"
+		id = "2648104308"
+		ip = "216.211.123.214"
+		reason = "Griefer. attacked a SSD character, when sent a PM immediatly DC'd"
+		bannedby = "quarintinesnipr"
+		temp = 0
+	hanusic3188329930
+		key = "hanusic"
+		id = "3188329930"
+		ip = "185.32.175.62"
+		reason = "Attempted to taze fellow security officers for no good reason. Disconnected before he could be talked to about this apparent grief behaviour. If there is some explanation beyond simple grief, this ban can be appealed on the forum."
+		bannedby = "mcbeard"
+		temp = 0
+	theslava1363830189
+		key = "theslava"
+		id = "1363830189"
+		ip = "109.105.162.152"
+		reason = "Griefer - murdered the CMO for no reason and refused to respond to Admin PMs."
+		bannedby = "absydion"
+		temp = 0
+	bobbybay468729260
+		key = "bobbybay"
+		id = "468729260"
+		ip = "151.228.246.140"
+		reason = "Escalated a disagreement with the Captain to full armed revolt and \"martial law\". May have been in the right initially, but took it way, way too far. This would have only been a warning except that the player repeatedly ignored the requests of an admin and became verbally abusive, continuing to fight after being asked to stop several times. The absolute refusal to listen to an admin and the verbal abuse warrant a permanent ban."
+		bannedby = "mcbeard"
+		temp = 0
+		minutes = null
+	analfissure490815179
+		key = "analfissure"
+		id = "490815179"
+		ip = "69.114.142.79"
+		reason = "Spammed some random inflammatory bullshit on the radio, then disconnected. Apparently nothing but a garden variety troll."
+		bannedby = "mcbeard"
+		temp = 0
+	gingerspice1550412135
+		key = "gingerspice"
+		id = "1550412135"
+		ip = "216.195.172.8"
+		reason = "Acid-gassed himself and another player for no reason.  Claimed to be sure he was a traitor for a dumb and obviously fallacious reason.  Was told to go elsewhere. "
+		bannedby = "absydion"
+		temp = 0
+	herakovich3220113470
+		key = "herakovich"
+		id = "3220113470"
+		ip = "74.192.234.182"
+		reason = "Griefer, he blew himself up in front of medbay trying to get medical help."
+		bannedby = "quarintinesnipr"
+		temp = 0
+	ken1001785226513
+		key = "ken100"
+		id = "1785226513"
+		ip = "98.127.219.47"
+		reason = "Continues to play insane, violent, and foolish characters despite repeated warnings."
+		bannedby = "absydion"
+		temp = 0
+	ackthecak875442952
+		key = "ackthecak"
+		id = "875442952"
+		ip = "174.126.195.52"
+		reason = "Broke several rules including skillset, comfort, and was generally powergaming. Gave him a friendly explanation and asked him to go read the rules. Instead, beat someone with a baton and kept doing the things I'd asked him not to. Issued a 24 hour ban for him to read the rules for real. Player threw a stream of ignorant, bigoted abuse at me. Now a permanent ban."
+		bannedby = "mcbeard"
+		temp = 0
+	lukep0072379393346
+		key = "lukep007"
+		id = "2379393346"
+		ip = "184.46.11.252"
+		reason = "Was permabanned by Absydion on friday for gibbing a SSD janitor following a build up of other offenses. For some reason the permaban didn't apply and he was able to play again. Logged in to complaints of him plasma-griefing the station. Actually applying earlier ban."
+		bannedby = "mcbeard"
+		temp = 0
+	jakeskillers2810014084
+		key = "jakeskillers"
+		id = "2810014084"
+		ip = "107.132.241.213"
+		reason = "After several warnings about griefy behaviour, joined a round, attacked random non-target people and suicide bombed in the first several minutes. Clearly the type of player who will continue griefy behaviour despite warning and not welcome here."
+		bannedby = "mcbeard"
+		temp = 0
+	wik3dsic3284974102
+		key = "wik3dsic"
+		id = "3284974102"
+		ip = "50.140.3.118"
+		reason = "Attempted to grief-detonate the engine (turned into a monkey, stole the Captain's spare ID, locked the emitter). In discussion either completely failed to understand the obvious problems with his behaviour or, more likely, was just attempting to troll me by playing dumb. Either way, clearly problematic."
+		bannedby = "mcbeard"
+		temp = 0
+	trixan1098951092
+		key = "trixan"
+		id = "1098951092"
+		ip = null
+		reason = "He blew up another player, for being suspected a ling, in a non ling round, also he endangered himself with the person he was trying to blow up. Feel free to appeal this perm ban on the forums."
+		bannedby = "hoknar"
+		temp = 0
+		minutes = 7521288
+	aidancarr00848877342
+		key = "aidancarr00"
+		id = "848877342"
+		ip = "97.116.121.63"
+		reason = "Caused general mayham when under lockdown. When attempted to discuss the situation he did not respond until eventually saying because I'm a rebel1254. Obviously a griefer... "
+		bannedby = "rebel1254"
+		temp = 0
+	kingofgames1810512082100458
+		key = "kingofgames181051"
+		id = "2082100458"
+		ip = "184.57.132.137"
+		reason = "Suicided and left."
+		bannedby = "quarintinesnipr"
+		temp = 0
+	unkowndata1520965895
+		key = "unkowndata"
+		id = "1520965895"
+		ip = null
+		reason = "Suicided and left."
+		bannedby = "commissardrew"
+		temp = 0
+	jivejohnson324791869
+		key = "jivejohnson"
+		id = "324791869"
+		ip = "70.177.80.48"
+		reason = "Griefer- turned capt into a monkey, then proceded to spray spacecleaner"
+		bannedby = "quarintinesnipr"
+		temp = 0
+	jumpinjimbolio2480577273
+		key = "jumpinjimbolio"
+		id = "2480577273"
+		ip = "68.207.165.215"
+		reason = "Griefer - appears to have helped the griefer who injected the captain with monkey genes, and was also spraying space lube, and shooting lasers at the everyone"
+		bannedby = "quarintinesnipr"
+		temp = 0
+	vandenbran1890594883
+		key = "vandenbran"
+		id = "1890594883"
+		ip = "206.183.182.86"
+		reason = "Griefer - set up a bomb rig during a heist round only to say his reason was for science. he also had a report of having built bombs on the server the day before and set them off. if you want to appeal this ban go to the forum to have the admins look at it."
+		bannedby = "quarintinesnipr"
+		temp = 0
+	moonjesus1314644397
+		key = "moonjesus"
+		id = "1314644397"
+		ip = "67.80.190.73"
+		reason = "Griefer. Attacked multiple people and eventually logged off when admins started coming on."
+		bannedby = "rebel1254"
+		temp = 0
+	trurascalz1334901826
+		key = "trurascalz"
+		id = "1334901826"
+		ip = "109.155.209.183"
+		reason = "Griefer. Electrified the arrival airlocks in a round riddled with griefers. Was not around to question. Seemed like a griefer."
+		bannedby = "rebel1254"
+		temp = 0
+	robrobbery2604800601
+		key = "robrobbery"
+		id = "2604800601"
+		ip = "78.73.236.177"
+		reason = "Griefer. According to logs he was a clear and obvious griefer in the round before. Free to appeal the ban if feels like it was undeserved."
+		bannedby = "rebel1254"
+		temp = 0
+	frenjo281408714
+		key = "frenjo"
+		id = "281408714"
+		ip = "151.224.201.249"
+		reason = "Griefer- he has been in the act of setting the station on fire on multiple occasions, and seems to admit to one of them, and i have evidence that he is the suspect for one of the fires. This is a permaban, appeal this on the fourms if you feel it necessary."
+		bannedby = "quarintinesnipr"
+		temp = 0
+	mp6767513650882
+		key = "mp6767"
+		id = "513650882"
+		ip = "72.179.5.14"
+		reason = "Griefer- released plasma and then DC'd."
+		bannedby = "quarintinesnipr"
+		temp = 0
+	thestino3557373994
+		key = "thestino"
+		id = "3557373994"
+		ip = "68.144.82.239"
+		reason = "suicided and then DC'd after two admin PMs were sent"
+		bannedby = "quarintinesnipr"
+		temp = 0
+	killermeatloaf627500249
+		key = "killermeatloaf"
+		id = "627500249"
+		ip = null
+		reason = "Griefer"
+		bannedby = "commissardrew"
+		temp = 0
+	axick2945388334
+		key = "axick"
+		id = "2945388334"
+		ip = "69.140.203.253"
+		reason = "Griefer"
+		bannedby = "rebel1254"
+		temp = 0
+	tinyhippo3049265288
+		key = "tinyhippo"
+		id = "3049265288"
+		ip = "72.213.157.4"
+		reason = "Griefer"
+		bannedby = "rebel1254"
+		temp = 0
+	donogath2710920330
+		key = "donogath"
+		id = "2710920330"
+		ip = null
+		reason = "Griefer"
+		bannedby = "commissardrew"
+		temp = 0
+	walrusdog1267130704
+		key = "walrusdog"
+		id = "1267130704"
+		ip = "107.194.185.219"
+		reason = "Griefer"
+		bannedby = "rebel1254"
+		temp = 0
+	supdawge608953727
+		key = "supdawge"
+		id = "608953727"
+		ip = "91.156.28.149"
+		reason = "Lied to admins."
+		bannedby = "absydion"
+		temp = 0
+	thechildflayer2370371940
+		key = "thechildflayer"
+		id = "2370371940"
+		ip = "174.107.65.128"
+		reason = "Logged in, acted like a chucklefuck, attempted to grief-detonate the engine, suicided, completely failed to account for his actions when questioned."
+		bannedby = "mcbeard"
+		temp = 0
+	rougerain41899761
+		key = "rougerain"
+		id = "41899761"
+		ip = "50.33.240.205"
+		reason = "Grief-attacked several people. Claimed to have already been banned for detonating the engine."
+		bannedby = "mcbeard"
+		temp = 0
+	sliggi111255548
+		key = "sliggi"
+		id = "111255548"
+		ip = "79.161.195.118"
+		reason = "Unprovoked attack with lethal weapons, setting off a bomb, being caught in multiple lies to admins (confirmed by logs, two trustworthy players)"
+		bannedby = "mcbeard"
+		temp = 0
+	sausablitz3175641919
+		key = "sausablitz"
+		id = "3175641919"
+		ip = "24.95.63.27"
+		reason = "Griefed the Captain by sedating and straightjacketing him, then suicided. When spoken to by an admin about these issues, joked around and refused to take them seriously. Clearly a troll."
+		bannedby = "mcbeard"
+		temp = 0
+	girdermein4180938431
+		key = "girdermein"
+		id = "4180938431"
+		ip = "72.130.212.212"
+		reason = "Had issues all round. Got Head/Sec banned. Then Simply revealed cultists in OOC then logged. Perm Ban."
+		bannedby = "hoknar"
+		temp = 0
+	gradedgrey354898456
+		key = "gradedgrey"
+		id = "354898456"
+		ip = "121.216.177.163"
+		reason = "Lied to admins and then threatened to suicide. "
+		bannedby = "absydion"
+		temp = 0
+	narsie852300709197
+		key = "narsie85"
+		id = "2300709197"
+		ip = "70.169.129.152"
+		reason = "Very rude to admins, tried to bargin with admins by holding items hostage and generally playing a poor RP character. "
+		bannedby = "rebel1254"
+		temp = 0
+	shoker091097703768
+		key = "shoker09"
+		id = "1097703768"
+		ip = "94.232.16.242"
+		reason = "Attacked a player for no reason, murdering them to the point of decapitation, and then immediately logged out."
+		bannedby = "absydion"
+		temp = 0
+	4motypoe1003196790
+		key = "4motypoe"
+		id = "1003196790"
+		ip = "176.32.154.153"
+		reason = "Attacked Lin Chang for no reason, murdering to the point of decapitation. Immediately logged out afterwards."
+		bannedby = "absydion"
+		temp = 0
+	brolaire165975655
+		key = "brolaire"
+		id = "165975655"
+		ip = "93.192.41.106"
+		reason = "Logged in, grabbed a kitchen knife, went to the medbay, and began stabbing himself until he died.  Logged when I PMed him about it.  Since he wouldn't stick around to talk and he broke the rules about self-harm, he's banned"
+		bannedby = "absydion"
+		temp = 0
+	neomerser1241539732
+		key = "neomerser"
+		id = "1241539732"
+		ip = "185.52.69.55"
+		reason = "Griefed by throwing a grenade into the bar as a non-antag. Didn't respond to admins and in fact threw a second grenade. Garden variety griefer."
+		bannedby = "mcbeard"
+		temp = 0
+	blinky9093256713888
+		key = "blinky909"
+		id = "3256713888"
+		ip = "173.27.185.228"
+		reason = "Grief-bombed security on an extended round."
+		bannedby = "mcbeard"
+		temp = 0
+	pip123452703183079
+		key = "pip12345"
+		id = "2703183079"
+		ip = "31.3.222.23"
+		reason = "Griefing the bridge as non-antag, for no reason."
+		bannedby = "roland410"
+		temp = 0
+	cyberlee2889802796
+		key = "cyberlee"
+		id = "2889802796"
+		ip = "99.126.239.29"
+		reason = "Try to grief elsewhere, bye!"
+		bannedby = "roland410"
+		temp = 0
+	acidicrain1195089761
+		key = "acidicrain"
+		id = "1195089761"
+		ip = "47.16.77.32"
+		reason = "Griefer, Ignored my order to stop after killing another player for  poor reasons"
+		bannedby = "pillowsnotperky"
+		temp = 0
+	wildderp732006718
+		key = "wildderp"
+		id = "732006718"
+		ip = "72.177.159.35"
+		reason = "Wasn't playing a believably character as HoP. While in the middle of discussing it with him, he murdered somebody and said Heil Hitler. Clearly not a fit for this server."
+		bannedby = "mcbeard"
+		temp = 0
+	drakenguard3622986021024
+		key = "drakenguard362"
+		id = "2986021024"
+		ip = "72.177.128.83"
+		reason = "Right after being talked to about playing a believable character and suiciding, the player hopped into the incinerator and let his Skype buddy kill him, going against the same rules he had *just* been talked to about. Clearly has no interest in listening to admins or following the rules. No longer welcome on the server."
+		bannedby = "mcbeard"
+		temp = 0
+	matt121343271978234
+		key = "matt12134"
+		id = "3271978234"
+		ip = null
+		reason = "As a non-antag Geneticist, went around the station applying thermite to various walls, venting parts of the station and breaching the security of several sensitive areas like heads of staff offices.  When PMd, was apparently AFK and did not respond.  Antagging as a non-antag is a serious offense.  If you return, please read our rules carefully and abide by them."
+		bannedby = "absydion"
+		temp = 1
+		minutes = 7541579
+	hogs1005687706
+		key = "hogs"
+		id = "1005687706"
+		ip = null
+		reason = "Refused to listen to admin warnings after several warning were told. Was going to detonate the engine to stop syndicate. "
+		bannedby = "rebel1254"
+		temp = 1
+		minutes = 7541496
+	dwice1080984379
+		key = "dwice"
+		id = "1080984379"
+		ip = null
+		reason = "Thank you for your advice on how to run the server."
+		bannedby = "roland410"
+		temp = 1
+		minutes = 7543602
+	korben82600028397
+		key = "korben8"
+		id = "2600028397"
+		ip = "212.198.217.114"
+		reason = "Rigging a fueltank to explode as captain, within 5 minutes of joining."
+		bannedby = "roland410"
+		temp = 0
+	craazyfyi3123182662
+		key = "craazyfyi"
+		id = "3123182662"
+		ip = "83.87.201.52"
+		reason = "After someone attacked him, dragged the person to the back room  of the chapel and incinerated him. Way overkill and when I was talking to him about it he DCed"
+		bannedby = "hoknar"
+		temp = 0
+	cheesez1890542999
+		key = "cheesez"
+		id = "1890542999"
+		ip = null
+		reason = "Overkill in self defence. Cut a guys head off. Player understands and agres a 3 day ban is a fair punishment."
+		bannedby = "hoknar"
+		temp = 1
