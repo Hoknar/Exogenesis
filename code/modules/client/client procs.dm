@@ -49,6 +49,16 @@
 	if(config && config.log_hrefs && href_logfile)
 		href_logfile << "<small>[time2text(world.timeofday,"hh:mm")] [src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]<br>"
 
+	if(href_list["KarmaBuy"])
+		var/karma=verify_karma()
+		switch(href_list["KarmaBuy"])
+			if("1")
+				if(karma <25)
+					usr << "You do not have enough karma!"
+				else
+					src.DB_job_unlock("Away Mission Leader",25)
+
+
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
 		if("usr")		hsrc = mob
@@ -242,7 +252,7 @@
 //send resources to the client. It's here in its own proc so we can move it around easiliy if need be
 /client/proc/send_resources()
 //	preload_vox() //Causes long delays with initial start window and subsequent windows when first logged in.
-	
+
 	// Send NanoUI resources to this client
 	nanomanager.send_resources(src)
 

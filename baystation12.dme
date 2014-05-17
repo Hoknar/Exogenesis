@@ -1347,6 +1347,7 @@
 #include "code\zBRAD\brad.dm"
 #include "code\zBRAD\Destiny.dm"
 #include "code\zBRAD\Exogenesis.dm"
+#include "code\zBRAD\karma.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\tgstation2.dmm"
