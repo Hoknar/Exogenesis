@@ -68,7 +68,6 @@
 
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.
-/var/const/Mostly for admin fun times.*/
 /var/const/access_cent_general = 101//General facilities.
 /var/const/access_cent_thunder = 102//Thunderdome.
 /var/const/access_cent_specops = 103//Special Ops.
@@ -78,6 +77,18 @@
 /var/const/access_cent_teleporter = 107//Teleporter.
 /var/const/access_cent_creed = 108//Creed's office.
 /var/const/access_cent_captain = 109//Captain's office/ID comp/AI.
+/var/const/access_cent_Hoknar =110//Rooms.
+/var/const/access_cent_McBeard =111//Rooms.
+/var/const/access_cent_Abysdion =112//Rooms.
+/var/const/access_cent_Snipr =113//Rooms.
+/var/const/access_cent_Rebel =114//Rooms.
+/var/const/access_cent_Drew =115//Rooms.
+/var/const/access_cent_Vognir =116//Rooms.
+/var/const/access_cent_Pillows =117//Rooms.
+/var/const/access_cent_G33KZ =118//Rooms.
+/var/const/access_cent_Xander =119//Rooms.
+/var/const/access_cent_Roland =120//Rooms.
+/var/const/access_cent_Slayer =121//Rooms.
 
 	//The Syndicate
 /var/const/access_syndicate = 150//General Syndicate Access
