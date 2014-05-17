@@ -11,6 +11,7 @@ var/const/ENGINEER			=(1<<6)
 var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
+/*var/const/BRIG                        =(1<<10)*/
 
 
 var/const/MEDSCI			=(1<<1)
@@ -71,7 +72,8 @@ var/list/medical_positions = list(
 	"Medical Doctor",
 	"Geneticist",
 	"Psychiatrist",
-	"Chemist"
+	"Chemist",
+	"Virologist"
 )
 
 
@@ -105,6 +107,7 @@ var/list/security_positions = list(
 	"Warden",
 	"Detective",
 	"Security Officer"
+	/*"Brig Guard"*/
 )
 
 
