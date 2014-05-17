@@ -122,6 +122,11 @@
 	T << "<span class='danger'>You have been absorbed by the changeling!</span>"
 
 	T.dna.real_name = T.real_name //Set this again, just to be sure that it's properly set.
+
+	if (T.dna in changeling.absorbed_dna)
+		src << "<span class='warning'>We have already absorbed all we can from this DNA.</span>"
+		return
+
 	changeling.absorbed_dna |= T.dna
 	if(src.nutrition < 400) src.nutrition = min((src.nutrition + T.nutrition), 400)
 	changeling.chem_charges += 10
