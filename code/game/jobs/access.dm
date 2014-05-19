@@ -66,8 +66,8 @@
 /var/const/access_psychiatrist = 64 // Psychiatrist's office
 /var/const/access_xenoarch = 65
 
-	//BEGIN CENTCOM ACCESS
-	/*Should leave plenty of room if we need to add more access levels.
+//BEGIN CENTCOM ACCESS
+//Should leave plenty of room if we need to add more access levels.
 /var/const/access_cent_general = 101//General facilities.
 /var/const/access_cent_thunder = 102//Thunderdome.
 /var/const/access_cent_specops = 103//Special Ops.
