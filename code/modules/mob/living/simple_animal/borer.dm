@@ -48,7 +48,10 @@
 	attacktext = "nips"
 	friendly = "prods"
 	wander = 0
+	alien_talk_understand = 1
 	pass_flags = PASSTABLE
+	see_invisible = 5
+	see_in_dark = 9
 
 	var/used_dominate
 	var/chemicals = 10                      // Chemicals used for reproduction and spitting neurotoxin.
@@ -268,7 +271,7 @@
 	if(chemicals < 50)
 		src << "You don't have enough chemicals!"
 
-	var/chem = input("Select a chemical to secrete.", "Chemicals") in list("bicaridine","tramadol","hyperzine","alkysine")
+	var/chem = input("Select a chemical to secrete.", "Chemicals") in list("hyperzine","bicaridine","tramadol","dexalin","dermaline","imidazoline","synaptizine","mindbreaker","alkysine")
 
 	if(chemicals < 50 || !host || controlling || !src || stat) //Sanity check.
 		return
