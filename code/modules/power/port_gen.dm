@@ -80,12 +80,6 @@ display round(lastgen) and plasmatank amount
 		icon_state = initial(icon_state)
 		handleInactive()
 
-/obj/machinery/power/port_gen/attack_hand(mob/user as mob)
-	if(..())
-		return
-	if(!anchored)
-		return
-
 /obj/machinery/power/port_gen/examine()
 	set src in oview(1)
 	if(active)
@@ -256,7 +250,6 @@ display round(lastgen) and plasmatank amount
 			del(src)
 
 /obj/machinery/power/port_gen/pacman/attack_hand(mob/user as mob)
-	..()
 	if (!anchored)
 		return
 
@@ -293,8 +286,6 @@ display round(lastgen) and plasmatank amount
 	onclose(user, "port_gen")
 
 /obj/machinery/power/port_gen/pacman/Topic(href, href_list)
-	if(..())
-		return
 
 	src.add_fingerprint(usr)
 	if(href_list["action"])
