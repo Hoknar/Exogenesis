@@ -7,7 +7,7 @@
 	status_flags = CANPARALYSE
 	heal_rate = 5
 	plasma_rate = 20
-
+	universal_understand = 1 //Because queens are evolved, gosh
 
 /mob/living/carbon/alien/humanoid/queen/New()
 	var/datum/reagents/R = new/datum/reagents(100)
