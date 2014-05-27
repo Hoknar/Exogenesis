@@ -1774,7 +1774,7 @@ datum
 			color = "#000067" // rgb: 0, 0, 103
 			toxpwr = 1
 			custom_metabolism = 0.1 //Default 0.2
-			overdose = 30
+			overdose = 15
 			overdose_dam = 5
 
 			on_mob_life(var/mob/living/M as mob)

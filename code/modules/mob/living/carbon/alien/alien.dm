@@ -14,8 +14,6 @@
 	var/max_plasma = 500
 
 	alien_talk_understand = 1
-	see_in_dark = 9
-	see_invisible = 5
 
 	var/obj/item/weapon/card/id/wear_id = null // Fix for station bounced radios -- Skie
 	var/has_fine_manipulation = 0

@@ -28,10 +28,10 @@
 		if (istype(target,/obj/machinery/door))
 			var/obj/machinery/door/O = target
 			chassis.visible_message("\red \The [chassis] starts to force \the [target] [O.density ? "open" : "closed"] with the Hydrolic Clamp!")
-			occupant_message("You start forcing the [target] [O.density ? "open" : "closed"] with the Hydraulic Clamp! You hear metal strain.")
+			occupant_message("You start forcing the [target] [O.density ? "open" : "closed"] with the Hydrolic Clamp! You hear metal strain.")
 			if(do_after_cooldown(target))
 				chassis.visible_message("\red \The [chassis] forces \the [target] [O.density ? "open" : "closed"] with the Hydrolic Clamp!")
-				occupant_message("You force \the [target] [O.density ? "open" : "closed"] with the Hydraulic Clamp! You hear metal strain, and a door [O.density ? "open" : "close"].")
+				occupant_message("You force \the [target] [O.density ? "open" : "closed"] with the Hydrolic Clamp! You hear metal strain, and a door [O.density ? "open" : "close"].")
 				if(O.density)
 					spawn(0)
 						O.open()
