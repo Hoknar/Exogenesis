@@ -1,5 +1,4 @@
 #pretending we're C because otherwise ruby will initialize, even with "language: dm".
-#No changes
 language: c
 
 env:
