@@ -106,6 +106,7 @@ FLOOR SAFES
 
 	if(href_list["decrement"])
 		dial = decrement(dial)
+		if(dial == tumbler_2_pos + 1)
 			tumbler_2_pos = increment(tumbler_2_pos)
 			if(canhear)
 				user << "<span class='notice'>You hear a clank from [src].</span>"
@@ -115,6 +116,7 @@ FLOOR SAFES
 
 	if(href_list["increment"])
 		dial = increment(dial)
+		if(dial == tumbler_1_pos +1)
 			tumbler_1_pos = increment(tumbler_1_pos)
 			if(canhear)
 				user << "<span class='notice'>You hear a clack from [src].</span>"
