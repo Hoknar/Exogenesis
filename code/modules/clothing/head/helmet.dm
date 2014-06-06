@@ -18,6 +18,14 @@
 	icon_state = "policehelm"
 	flags_inv = 0
 
+/obj/item/clothing/head/helmet/officer
+	name = "officer's cap"
+	desc = "It's a special cap issued to the security force. Protects the head from impacts."
+	icon_state = "formalhat"
+	item_state = "formalhat"
+	item_color = "formalhat"
+	flags_inv = 0
+
 /obj/item/clothing/head/helmet/riot
 	name = "riot helmet"
 	desc = "It's a helmet specifically designed to protect against close range attacks."
