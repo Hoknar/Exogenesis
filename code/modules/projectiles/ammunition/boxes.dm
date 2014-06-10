@@ -51,6 +51,26 @@
 	multiple_sprites = 1
 
 
+/obj/item/ammo_magazine/c40
+	name = "magazine (.40)"
+	icon_state = "40"
+	origin_tech = "combat=2"
+	ammo_type = "/obj/item/ammo_casing/c40"
+	max_ammo = 7
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/c40/empty
+	max_ammo = 0
+
+
+/obj/item/ammo_magazine/c9mm
+	name = "Ammunition Box (9mm)"
+	icon_state = "9mm"
+	origin_tech = "combat=2"
+	ammo_type = "/obj/item/ammo_casing/c9mm"
+	max_ammo = 30
+
+
 /obj/item/ammo_magazine/mc9mm
 	name = "magazine (9mm)"
 	icon_state = "9x19p"

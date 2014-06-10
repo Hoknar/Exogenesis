@@ -150,3 +150,27 @@
 	icon = 'icons/obj/gun.dmi'
 	icon_state = "silencer"
 	w_class = 2
+
+/obj/item/weapon/gun/projectile/SW40
+	name = "\improper Smith & Wesson .40 Cal Handgun"
+	desc = "A compact, robust firearm with a two-tone finish."
+	icon_state = "40cal"
+	w_class = 2
+	max_shells = 7
+	caliber = ".40"
+	origin_tech = "combat=2;materials=2"
+	ammo_type = "/obj/item/ammo_casing/c40"
+	load_method = 2
+
+/obj/item/weapon/gun/projectile/SW40/New()
+	..()
+	empty_mag = new /obj/item/ammo_magazine/c40/empty(src)
+	return
+
+/obj/item/weapon/gun/projectile/SW40/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
+	..()
+	if(!loaded.len && empty_mag)
+		empty_mag.loc = get_turf(src.loc)
+		empty_mag = null
+		user << "<span class='notice'>The Magazine falls out and clatters on the floor!</span>"
+	return

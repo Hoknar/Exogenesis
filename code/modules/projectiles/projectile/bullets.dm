@@ -32,6 +32,9 @@
 /obj/item/projectile/bullet/midbullet2
 	damage = 25
 
+/obj/item/projectile/bullet/secbullet
+	damage = 20
+
 /obj/item/projectile/bullet/suffocationbullet//How does this even work?
 	name = "co bullet"
 	damage = 20

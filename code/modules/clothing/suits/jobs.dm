@@ -66,7 +66,7 @@
 	blood_overlay_type = "armor"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
-//Detective
+//Security
 /obj/item/clothing/suit/storage/det_suit
 	name = "coat"
 	desc = "An 18th-century multi-purpose trenchcoat. Someone who wears this means serious business."
@@ -79,6 +79,16 @@
 
 /obj/item/clothing/suit/storage/det_suit/black
 	icon_state = "detective2"
+
+/obj/item/clothing/suit/storage/det_suit/formal_warden
+	icon_state = "formal_warden"
+	item_state = "formal_warden"
+	item_color = "formal_warden"
+
+/obj/item/clothing/suit/storage/det_suit/formal_hos
+	icon_state = "formal_hos"
+	item_state = "formal_hos"
+	item_color = "formal_hos"
 
 //Forensics
 /obj/item/clothing/suit/storage/forensics
