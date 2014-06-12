@@ -594,7 +594,7 @@
 	item_color = "leatherjack"
 
 /obj/item/clothing/suit/storage/det_suit/fluff/dennis_hachert_2 //NHDF Captain's Jacket - Dennis Hachert - Rebel1254
-	name = "/improper NHDF Captain's Jacket"
+	name = "NHDF Captain's Jacket"
 	desc = "A jacket worn by New Horizon Defense fleet captains. It's rather worn."
 	icon = 'icons/obj/custom_items.dmi'
 	icon_state = "dennishachert_2"
@@ -627,7 +627,7 @@
 	item_color = "milohachert"
 
 /obj/item/clothing/under/fluff/dennis_hachert_1 //NHDF Captain's Uniform - Dennis Hachert - Rebel1254
-	name = "/improper NHDF Captain's Uniform"
+	name = "NHDF Captain's Uniform"
 	desc = "An officer's base uniform for the New Horizon Defense Fleet."
 	icon = 'icons/obj/custom_items.dmi'
 	icon_state = "dennishachert"
