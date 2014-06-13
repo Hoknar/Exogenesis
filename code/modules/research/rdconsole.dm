@@ -279,7 +279,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 								usr <<"\red The destructive analyzer appears to be empty."
 								screen = 1.0
 								return
-							if(linked_destroy.loaded_item.reliability >= 90)
+							if(linked_destroy.loaded_item.reliability >= 0)
 								var/list/temp_tech = linked_destroy.ConvertReqString2List(linked_destroy.loaded_item.origin_tech)
 								for(var/T in temp_tech)
 									files.UpdateTech(T, temp_tech[T])
@@ -431,6 +431,10 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 								linked_imprinter.diamond_amount = max(0, (linked_imprinter.diamond_amount-being_built.materials[M]))
 							if("$uranium")
 								linked_imprinter.uranium_amount = max(0, (linked_imprinter.uranium_amount-being_built.materials[M]))
+							if("$silver")
+								linked_imprinter.silver_amount = max(0, (linked_imprinter.silver_amount-being_built.materials[M]))
+							if("$plasma")
+								linked_imprinter.plasma_amount = max(0, (linked_imprinter.plasma_amount-being_built.materials[M]))
 							else
 								linked_imprinter.reagents.remove_reagent(M, being_built.materials[M])
 					var/obj/new_item = new being_built.build_path(src)
@@ -505,6 +509,12 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			if("uranium")
 				type = /obj/item/stack/sheet/mineral/uranium
 				res_amount = "uranium_amount"
+			if("silver")
+				type = /obj/item/stack/sheet/mineral/silver
+				res_amount = "silver_amount"
+			if("plasma")
+				type = /obj/item/stack/sheet/mineral/plasma
+				res_amount = "plasma_amount"
 		if(ispath(type) && hasvar(linked_imprinter, res_amount))
 			var/obj/item/stack/sheet/sheet = new type(linked_imprinter.loc)
 			var/available_num_sheets = round(linked_imprinter.vars[res_amount]/sheet.perunit)
@@ -853,6 +863,10 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 								if(D.materials[M] > linked_imprinter.diamond_amount) check_materials = 0
 							if("$uranium")
 								if(D.materials[M] > linked_imprinter.uranium_amount) check_materials = 0
+							if("$silver")
+								if(D.materials[M] > linked_imprinter.silver_amount) check_materials = 0
+							if("$plasma")
+								if(D.materials[M] > linked_imprinter.plasma_amount) check_materials = 0
 					else if (!linked_imprinter.reagents.has_reagent(M, D.materials[M]))
 						check_materials = 0
 				if (check_materials)
@@ -900,6 +914,18 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			if(linked_imprinter.uranium_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=uranium;imprinter_ejectsheet_amt=1'>(1 Sheet)</A> "
 			if(linked_imprinter.uranium_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=uranium;imprinter_ejectsheet_amt=5'>(5 Sheets)</A> "
 			if(linked_imprinter.uranium_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=uranium;imprinter_ejectsheet_amt=50'>(Max Sheets)</A>"
+			//Silver
+			dat += "* [linked_imprinter.silver_amount] cm<sup>3</sup> of Silver || "
+			dat += "Eject: "
+			if(linked_imprinter.silver_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=silver;imprinter_ejectsheet_amt=1'>(1 Sheet)</A> "
+			if(linked_imprinter.silver_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=silver;imprinter_ejectsheet_amt=5'>(5 Sheets)</A> "
+			if(linked_imprinter.silver_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=silver;imprinter_ejectsheet_amt=50'>(Max Sheets)</A>"
+			//Plasma
+			dat += "* [linked_imprinter.plasma_amount] cm<sup>3</sup> of Plasma || "
+			dat += "Eject: "
+			if(linked_imprinter.plasma_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=plasma;imprinter_ejectsheet_amt=1'>(1 Sheet)</A> "
+			if(linked_imprinter.plasma_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=plasma;imprinter_ejectsheet_amt=5'>(5 Sheets)</A> "
+			if(linked_imprinter.plasma_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=plasma;imprinter_ejectsheet_amt=50'>(Max Sheets)</A>"
 
 	user << browse("<TITLE>Research and Development Console</TITLE><HR>[dat]", "window=rdconsole;size=575x400")
 	onclose(user, "rdconsole")

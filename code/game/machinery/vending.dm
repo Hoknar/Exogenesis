@@ -220,14 +220,23 @@
 /obj/machinery/vending/attack_ai(mob/user as mob)
 	return attack_hand(user)
 
+
+
 /obj/machinery/vending/attack_hand(mob/user as mob)
 	if(stat & (BROKEN|NOPOWER))
 		return
 	user.set_machine(src)
 
-	if(src.seconds_electrified != 0)
-		if(src.shock(user, 100))
-			return
+	var/distance = get_dist(user, src)
+
+	if(distance != 1)
+		return
+	else
+		if(src.seconds_electrified != 0)
+			if(src.shock(user, 100))
+				return
+
+
 
 	var/vendorname = (src.name)  //import the machine's name
 

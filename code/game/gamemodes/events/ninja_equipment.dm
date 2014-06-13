@@ -1329,16 +1329,17 @@ It is possible to destroy the net by the occupant or someone else.
 				density = 0
 				if(affecting)
 					var/mob/living/carbon/M = affecting
-					M.anchored = 0
 					for(var/mob/O in viewers(src, 3))
 						O.show_message(text("[] was recovered from the energy net!", M.name), 1, text("You hear a grunt."), 2)
 					if(!isnull(master))//As long as they still exist.
 						master << "\red <b>ERROR</b>: \black unable to initiate transport protocol. Procedure terminated."
+					M.anchored = initial(M.anchored)
+					M.captured = 0
 				del(src)
 			return
 
 	process(var/mob/living/carbon/M as mob)
-		var/check = 60//30 seconds before teleportation. Could be extended I guess. - Extended to one minute
+		var/check = 30//30 seconds before teleportation.
 		var/mob_name = affecting.name//Since they will report as null if terminated before teleport.
 		//The person can still try and attack the net when inside.
 		while(!isnull(M)&&!isnull(src)&&check>0)//While M and net exist, and 60 seconds have not passed.
@@ -1348,6 +1349,8 @@ It is possible to destroy the net by the occupant or someone else.
 		if(isnull(M)||M.loc!=loc)//If mob is gone or not at the location.
 			if(!isnull(master))//As long as they still exist.
 				master << "\red <b>ERROR</b>: \black unable to locate \the [mob_name]. Procedure terminated."
+			M.captured = 0
+			M.anchored = initial(M.anchored)
 			del(src)//Get rid of the net.
 			return
 
@@ -1362,6 +1365,7 @@ It is possible to destroy the net by the occupant or someone else.
 					if(W==M:w_uniform)	continue//So all they're left with are shoes and uniform.
 					if(W==M:shoes)	continue
 				M.drop_from_inventory(W)
+				M.captured = 0
 
 			spawn(0)
 				playsound(M.loc, 'sound/effects/sparks4.ogg', 50, 1)
@@ -1369,6 +1373,7 @@ It is possible to destroy the net by the occupant or someone else.
 
 			M.loc = pick(holdingfacility)//Throw mob in to the holding facility.
 			M << "\red You appear in a strange place!"
+			M.anchored = initial(M.anchored)
 
 			spawn(0)
 				var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
@@ -1390,6 +1395,8 @@ It is possible to destroy the net by the occupant or someone else.
 
 		else//And they are free.
 			M << "\blue You are free of the net!"
+			M.anchored = initial(M.anchored)
+			M.captured = 0
 		return
 
 	bullet_act(var/obj/item/projectile/Proj)

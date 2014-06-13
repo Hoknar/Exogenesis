@@ -37,14 +37,16 @@
 	var/opened = 0
 	var/temp
 	var/list/part_sets = list( //set names must be unique
-	"Robot"=list(
+	"Cyborg"=list(
 						/obj/item/robot_parts/robot_suit,
 						/obj/item/robot_parts/chest,
 						/obj/item/robot_parts/head,
 						/obj/item/robot_parts/l_arm,
 						/obj/item/robot_parts/r_arm,
 						/obj/item/robot_parts/l_leg,
-						/obj/item/robot_parts/r_leg,
+						/obj/item/robot_parts/r_leg
+					),
+	"Cyborg Repair Parts"=list(
 						/obj/item/robot_parts/robot_component/binary_communication_device,
 						/obj/item/robot_parts/robot_component/radio,
 						/obj/item/robot_parts/robot_component/actuator,
@@ -117,7 +119,7 @@
 						///obj/item/mecha_parts/mecha_equipment/weapon/honker Thirdly HONK-related
 						),
 
-	"Robotic Upgrade Modules" = list(
+	"Cyborg Upgrade Modules" = list(
 						/obj/item/borg/upgrade/reset,
 						/obj/item/borg/upgrade/rename,
 						/obj/item/borg/upgrade/restart,
@@ -498,7 +500,7 @@
 				src.updateUsrDialog()
 			return
 */
-	if(!silent)	
+	if(!silent)
 		temp = "Updating local R&D database..."
 		src.updateUsrDialog()
 		sleep(30) //only sleep if called by user

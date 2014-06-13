@@ -120,7 +120,7 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 			return 1
 		var/obj/item/stack/sheet/stack = O
 		if ((TotalMaterials() + stack.perunit) > max_material_amount)
-			user << "\red The [name] is full. Please remove glass from the protolathe in order to insert more."
+			user << "\red The [name] is full. Please remove something from the protolathe in order to insert more."
 			return 1
 
 		var/amount = round(input("How many sheets do you want to add?") as num)
