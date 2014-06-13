@@ -593,6 +593,14 @@
 	item_state = "leatherjack"
 	item_color = "leatherjack"
 
+/obj/item/clothing/suit/storage/det_suit/fluff/dennis_hachert_2 //NHDF Captain's Jacket - Dennis Hachert - Rebel1254
+	name = "NHDF Captain's Jacket"
+	desc = "A jacket worn by New Horizon Defense fleet captains. It's rather worn."
+	icon = 'icons/obj/custom_items.dmi'
+	icon_state = "dennishachert_2"
+	item_state = "dennishachert_2"
+	item_color = "dennishachert_2"
+
 /obj/item/clothing/suit/armor/vest/fluff/deus_blueshield //deusdactyl
 	name = "blue shield security armor"
 	desc = "An armored vest with the badge of a Blue Shield Security lieutenant."
@@ -617,6 +625,14 @@
 	icon_state = "milohachert"
 	item_state = "milohachert"
 	item_color = "milohachert"
+
+/obj/item/clothing/under/fluff/dennis_hachert_1 //NHDF Captain's Uniform - Dennis Hachert - Rebel1254
+	name = "NHDF Captain's Uniform"
+	desc = "An officer's base uniform for the New Horizon Defense Fleet."
+	icon = 'icons/obj/custom_items.dmi'
+	icon_state = "dennishachert"
+	item_state = "dennishachert"
+	item_color = "dennishachert"
 
 /obj/item/clothing/under/fluff/jumpsuitdown //searif: Yuki Matsuda
 	name = "rolled down jumpsuit"
