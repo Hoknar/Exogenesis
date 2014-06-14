@@ -19,15 +19,15 @@ FLOOR SAFES
 	var/tumbler_2_open
 	var/dial = 0		//where is the dial pointing?
 	var/space = 0		//the combined w_class of everything in the safe
-	var/maxspace = 24	//the maximum combined w_class of stuff in the safe
+	var/maxspace = 50	//the maximum combined w_class of stuff in the safe
 
 
 /obj/structure/safe/New()
-	tumbler_1_pos = rand(0, 72)
-	tumbler_1_open = rand(0, 72)
+	tumbler_1_pos = rand(0, 31)
+	tumbler_1_open = rand(0, 31)
 
-	tumbler_2_pos = rand(0, 72)
-	tumbler_2_open = rand(0, 72)
+	tumbler_2_pos = rand(0, 31)
+	tumbler_2_open = rand(0, 31)
 
 
 /obj/structure/safe/initialize()
@@ -42,11 +42,11 @@ FLOOR SAFES
 /obj/structure/safe/proc/check_unlocked(mob/user as mob, canhear)
 	if(user && canhear)
 		if(tumbler_1_pos == tumbler_1_open)
-			user << "<span class='notice'>You hear a [pick("tonk", "krunk", "plunk")] from [src].</span>"
+			user << "<span class='notice'>You hear a click from [src].</span>"
 		if(tumbler_2_pos == tumbler_2_open)
-			user << "<span class='notice'>You hear a [pick("tink", "krink", "plink")] from [src].</span>"
+			user << "<span class='notice'>You hear a clack from [src].</span>"
 	if(tumbler_1_pos == tumbler_1_open && tumbler_2_pos == tumbler_2_open)
-		if(user) visible_message("<b>[pick("Spring", "Sprang", "Sproing", "Clunk", "Krunk")]!</b>")
+		if(user) visible_message("<b>Bamm!</b>")
 		return 1
 	return 0
 
@@ -54,13 +54,13 @@ FLOOR SAFES
 /obj/structure/safe/proc/decrement(num)
 	num -= 1
 	if(num < 0)
-		num = 71
+		num = 30
 	return num
 
 
 /obj/structure/safe/proc/increment(num)
 	num += 1
-	if(num > 71)
+	if(num > 30)
 		num = 0
 	return num
 
@@ -75,7 +75,7 @@ FLOOR SAFES
 /obj/structure/safe/attack_hand(mob/user as mob)
 	user.set_machine(src)
 	var/dat = "<center>"
-	dat += "<a href='?src=\ref[src];open=1'>[open ? "Close" : "Open"] [src]</a> | <a href='?src=\ref[src];decrement=1'>-</a> [dial * 5] <a href='?src=\ref[src];increment=1'>+</a>"
+	dat += "<a href='?src=\ref[src];open=1'>[open ? "Close" : "Open"] [src]</a> | <a href='?src=\ref[src];decrement=1'>-</a> [dial] <a href='?src=\ref[src];increment=1'>+</a>"
 	if(open)
 		dat += "<table>"
 		for(var/i = contents.len, i>=1, i--)
@@ -106,28 +106,20 @@ FLOOR SAFES
 
 	if(href_list["decrement"])
 		dial = decrement(dial)
-		if(dial == tumbler_1_pos + 1 || dial == tumbler_1_pos - 71)
-			tumbler_1_pos = decrement(tumbler_1_pos)
+		if(dial == tumbler_2_pos + 1)
+			tumbler_2_pos = increment(tumbler_2_pos)
 			if(canhear)
-				user << "<span class='notice'>You hear a [pick("clack", "scrape", "clank")] from [src].</span>"
-			if(tumbler_1_pos == tumbler_2_pos + 37 || tumbler_1_pos == tumbler_2_pos - 35)
-				tumbler_2_pos = decrement(tumbler_2_pos)
-				if(canhear)
-					user << "<span class='notice'>You hear a [pick("click", "chink", "clink")] from [src].</span>"
+				user << "<span class='notice'>You hear a clank from [src].</span>"
 			check_unlocked(user, canhear)
 		updateUsrDialog()
 		return
 
 	if(href_list["increment"])
 		dial = increment(dial)
-		if(dial == tumbler_1_pos - 1 || dial == tumbler_1_pos + 71)
+		if(dial == tumbler_1_pos +1)
 			tumbler_1_pos = increment(tumbler_1_pos)
 			if(canhear)
-				user << "<span class='notice'>You hear a [pick("clack", "scrape", "clank")] from [src].</span>"
-			if(tumbler_1_pos == tumbler_2_pos - 37 || tumbler_1_pos == tumbler_2_pos + 35)
-				tumbler_2_pos = increment(tumbler_2_pos)
-				if(canhear)
-					user << "<span class='notice'>You hear a [pick("click", "chink", "clink")] from [src].</span>"
+				user << "<span class='notice'>You hear a clack from [src].</span>"
 			check_unlocked(user, canhear)
 		updateUsrDialog()
 		return

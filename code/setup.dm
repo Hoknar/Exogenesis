@@ -674,7 +674,7 @@ var/list/be_special_flags = list(
 	"Diona" = BE_PLANT
 	)
 
-#define AGE_MIN 17			//youngest a character can be
+#define AGE_MIN 18			//youngest a character can be
 #define AGE_MAX 85			//oldest a character can be
 
 //Languages!
@@ -731,18 +731,19 @@ var/list/RESTRICTED_CAMERA_NETWORKS = list( //Those networks can only be accesse
 #define NO_PAIN 8
 
 #define HAS_SKIN_TONE 16
-#define HAS_LIPS 32
-#define HAS_UNDERWEAR 64
-#define HAS_TAIL 128
+#define HAS_SKIN_COLOR 32
+#define HAS_LIPS 64
+#define HAS_UNDERWEAR 128
+#define HAS_TAIL 256
 
-#define IS_SLOW 256
-#define IS_PLANT 512
-#define IS_WHITELISTED 1024
+#define IS_SLOW 512
+#define IS_PLANT 1024
+#define IS_WHITELISTED 2048
 
-#define RAD_ABSORB 2048
-#define REQUIRE_LIGHT 4096
+#define RAD_ABSORB 4096
+#define REQUIRE_LIGHT 8192
 
-#define IS_SYNTHETIC 8192
+#define IS_SYNTHETIC 16384
 
 //Language flags.
 #define WHITELISTED 1  // Language is available if the speaker is whitelisted.

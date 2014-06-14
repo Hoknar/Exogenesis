@@ -760,4 +760,4 @@
 	icon = 'icons/obj/stock_parts.dmi'
 	icon_state = "capacitor"
 	desc = "A debug item for research."
-	origin_tech = "materials=8;programming=8;magnets=8;powerstorage=8;bluespace=8;combat=8;biotech=8;syndicate=8"
+	origin_tech = "materials=11;programming=11;magnets=11;powerstorage=11;bluespace=11;combat=11;biotech=11;syndicate=11;plasmatech=11;engineering=11"

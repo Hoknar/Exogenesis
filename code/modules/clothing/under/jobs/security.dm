@@ -58,6 +58,16 @@
 	item_state = "warden_corporate"
 	item_color = "warden_corporate"
 
+/obj/item/clothing/under/rank/security/formal
+	icon_state = "sec_formal"
+	item_state = "sec_formal"
+	item_color = "sec_formal"
+
+/obj/item/clothing/under/rank/warden/formal
+	icon_state = "warden_formal"
+	item_state = "warden_formal"
+	item_color = "warden_formal"
+
 /obj/item/clothing/under/tactical
 	name = "tactical jumpsuit"
 	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for robust protection."
@@ -127,6 +137,11 @@
 	icon_state = "hos_corporate"
 	item_state = "hos_corporate"
 	item_color = "hos_corporate"
+
+/obj/item/clothing/under/rank/head_of_security/formal
+	icon_state = "hos_formal"
+	item_state = "hos_formal"
+	item_color = "hos_formal"
 
 /obj/item/clothing/head/helmet/HoS
 	name = "Head of Security Hat"

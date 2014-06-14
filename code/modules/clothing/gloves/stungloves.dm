@@ -18,7 +18,7 @@
 			else
 				user << "<span class='notice'>[src] are already wired.</span>"
 		else
-			user << "<span class='notice'[src] is not suitable for wiring.</span>"
+			user << "<span class='notice'>[src] is not suitable for wiring.</span>"
 
 	else if(istype(W, /obj/item/weapon/cell))
 		if(!wired)

@@ -91,7 +91,7 @@
 	anchored = 1
 	use_power = 1
 	idle_power_usage = 10
-	active_power_usage = 500
+	active_power_usage = 1000
 
 /obj/machinery/fermenter/process()
 	if(error)
@@ -157,7 +157,7 @@
 	anchored = 1
 	use_power = 1
 	idle_power_usage = 10
-	active_power_usage = 10000
+	active_power_usage = 1000
 
 /obj/machinery/still/process()
 	if(error)
@@ -219,7 +219,7 @@
 	anchored = 1
 	use_power = 1
 	idle_power_usage = 10
-	active_power_usage = 500
+	active_power_usage = 1000
 
 
 
@@ -243,7 +243,7 @@
 	anchored = 1
 	use_power = 1
 	idle_power_usage = 10
-	active_power_usage = 10000
+	active_power_usage = 1000
 
 /obj/machinery/centrifuge/process()
 	if(error)
