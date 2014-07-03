@@ -1186,8 +1186,8 @@ datum
 				M.AdjustWeakened(-1)
 				if(holder.has_reagent("mindbreaker"))
 					holder.remove_reagent("mindbreaker", 5)
-				M.hallucination = max(0, M.hallucination - 10)
-				if(prob(60))	M.adjustToxLoss(1)
+				M.hallucination = max(0, M.hallucination - 100)
+				if(prob(10))	M.adjustToxLoss(1)
 				..()
 				return
 
@@ -1691,7 +1691,7 @@ datum
 
 			on_mob_life(var/mob/living/M)
 				if(!M) M = holder.my_atom
-				M.hallucination += 10
+				M.hallucination += 5
 				..()
 				return
 
