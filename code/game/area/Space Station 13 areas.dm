@@ -358,6 +358,9 @@ var/list/ghostteleportlocs = list()
 /area/centcom/holding
 	name = "\improper Holding Facility"
 
+/area/centcom/ninjain
+	name = "\improper Ninja Teleport"
+
 //SYNDICATES
 
 /area/syndicate_mothership
