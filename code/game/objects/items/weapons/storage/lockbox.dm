@@ -86,3 +86,41 @@
 	New()
 		..()
 		new /obj/item/weapon/grenade/flashbang/clusterbang(src)
+
+
+/obj/item/weapon/storage/lockbox/medalbox
+	name = "Medal Box"
+	desc = "A box of medals, to be awarded to the worthy ones."
+	w_class = 2
+	max_w_class = 2
+	max_combined_w_class = 50 //The sum of the w_classes of all the items in this storage item.
+	storage_slots = 25
+	req_access = list(access_captain)
+
+	New()
+		..()
+		new /obj/item/clothing/tie/medal/conduct(src)
+		new /obj/item/clothing/tie/medal/conduct(src)
+		new /obj/item/clothing/tie/medal/conduct(src)
+		new /obj/item/clothing/tie/medal/conduct(src)
+		new /obj/item/clothing/tie/medal/conduct(src)
+		new /obj/item/clothing/tie/medal/bronze_heart(src)
+		new /obj/item/clothing/tie/medal/bronze_heart(src)
+		new /obj/item/clothing/tie/medal/bronze_heart(src)
+		new /obj/item/clothing/tie/medal/bronze_heart(src)
+		new /obj/item/clothing/tie/medal/bronze_heart(src)
+		new /obj/item/clothing/tie/medal/nobel_science(src)
+		new /obj/item/clothing/tie/medal/nobel_science(src)
+		new /obj/item/clothing/tie/medal/nobel_science(src)
+		new /obj/item/clothing/tie/medal/nobel_science(src)
+		new /obj/item/clothing/tie/medal/nobel_science(src)
+		new /obj/item/clothing/tie/medal/silver/valor(src)
+		new /obj/item/clothing/tie/medal/silver/valor(src)
+		new /obj/item/clothing/tie/medal/silver/valor(src)
+		new /obj/item/clothing/tie/medal/silver/valor(src)
+		new /obj/item/clothing/tie/medal/silver/valor(src)
+		new /obj/item/clothing/tie/medal/silver/security(src)
+		new /obj/item/clothing/tie/medal/silver/security(src)
+		new /obj/item/clothing/tie/medal/silver/security(src)
+		new /obj/item/clothing/tie/medal/silver/security(src)
+		new /obj/item/clothing/tie/medal/silver/security(src)
