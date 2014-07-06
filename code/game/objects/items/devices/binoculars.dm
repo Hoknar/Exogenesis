@@ -1,9 +1,9 @@
 /obj/item/devices/binoculars
 	name = "Binoculars"
 	desc = "A pair of binoculars, so you can see further."
-	icon = 'icons/obj/clothing/glasses.dmi'
-	icon_state = "material"
-	item_state = "glasses"
+	icon = 'icons/obj/binoculars.dmi'
+	icon_state = "binoculars"
+	item_state = "icons/obj/binoculars.dmi"
 	origin_tech = "materials=7"
 	w_class = 2.0
 	var/zoom = 0
