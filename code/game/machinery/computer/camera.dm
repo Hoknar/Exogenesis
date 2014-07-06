@@ -189,6 +189,11 @@
 	desc = "An old TV hooked into the stations camera network."
 	icon_state = "security_det"
 
+/obj/machinery/computer/security/laptop
+	name = "Security Cameras"
+	desc = "Cheap Nanotrasen Laptop."
+	icon_state = "cameraslaptop"
+
 
 /obj/machinery/computer/security/mining
 	name = "Outpost Cameras"
