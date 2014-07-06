@@ -14,7 +14,7 @@ LINEN BINS
 	throwforce = 1
 	throw_speed = 1
 	throw_range = 2
-	w_class = 1.0
+	w_class = 2.0
 	item_color = "white"
 
 
@@ -91,9 +91,6 @@ LINEN BINS
 /obj/item/weapon/bedsheet/brown
 	icon_state = "sheetbrown"
 	item_color = "brown"
-
-
-
 
 /obj/structure/bedsheetbin
 	name = "linen bin"
