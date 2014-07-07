@@ -895,11 +895,88 @@
 	var/idlockdoor = 1
 	var/idlock = 0
 	var/linkedID = 0
+	var/doorready = 1
+	var/oldname = "name"
 
 /obj/machinery/door/airlock/personal/bathroom
 	name = "Bathroom Stall Door"
 	icon = 'icons/obj/doors/Doorsilver.dmi'
 	desc = "This is a lockable stall door. Swipe your ID on the door to lock it using your account number."
+
+/obj/machinery/door/airlock/personal/cell
+	name = "Cell Door"
+	icon = 'icons/obj/doors/Doorglass.dmi'
+	desc = "This is a lockable Cell door. Swipe your ID on the door to lock it to your account number. Guards also have access to unlock with their ID."
+	opacity = 0
+
+/obj/machinery/door/airlock/personal/New()
+	oldname = src.name
+	..()
+
+/obj/machinery/door/airlock/personal/cell/attackby(C as obj, mob/user as mob)
+	if(istype(C, /obj/item/weapon/card/id) && src.idlockdoor)
+		var/isguard = 0
+		var/obj/item/weapon/card/id/W = C
+		if(src.idlock)
+			if(src.linkedID == W.associated_account_number)
+				user << "\blue You swipe your card and the door unlocks."
+				src.name = src.oldname
+				src.locked = 0
+				src.idlock = 0
+				src.doorready = 0
+				src.update_icon()
+				return
+			else
+				for(var/theaccess in W.access)
+					if(theaccess == 2)
+						isguard = 1
+
+				if(isguard)
+					user << "\blue You swipe your card and the door recognizes you as a guard and unlocks."
+					src.locked = 0
+					src.idlock = 0
+					src.doorready = 0
+					src.update_icon()
+				else
+					user << "\blue You swipe your ID, but the door just beeps at you..."
+					flick("door_deny", src)
+				return
+		else
+			user << "\blue You swipe your ID, and the door locks down, linked to your account number."
+			src.name = "[src.name] ([W.registered_name])"
+			src.linkedID = W.associated_account_number
+			src.idlock = 1
+			src.locked = 1
+			src.doorready = 0
+			src.update_icon()
+			return
+	..()
+
+/obj/machinery/door/airlock/personal/bathroom/attackby(C as obj, mob/user as mob)
+	if(istype(C, /obj/item/weapon/card/id) && src.idlockdoor)
+		var/obj/item/weapon/card/id/W = C
+		if(src.idlock)
+			if(src.linkedID == W.associated_account_number)
+				user << "\blue You swipe your card and the door unlocks."
+				src.name = src.oldname
+				src.locked = 0
+				src.idlock = 0
+				src.doorready = 0
+				src.update_icon()
+			else
+				user << "\blue You swipe your ID, but the door just beeps at you..."
+				flick("door_deny", src)
+			return
+		else
+			user << "\blue You swipe your ID, and the door locks down, linked to your account number."
+			src.name = "[src.name] ([W.registered_name])"
+			src.linkedID = W.associated_account_number
+			src.idlock = 1
+			src.locked = 1
+			src.doorready = 0
+			src.update_icon()
+			return
+	..()
 
 
 /obj/machinery/door/airlock/personal/attackby(C as obj, mob/user as mob)
@@ -1002,27 +1079,314 @@
 
 	else if(istype(C, /obj/item/weapon/card/id) && src.idlockdoor)
 		var/obj/item/weapon/card/id/W = C
-		if(src.idlock)
+		if(src.idlock && src.doorready)
 			if(src.linkedID == W.associated_account_number)
 				user << "\blue You swipe your card and the door unlocks."
+				src.name = src.oldname
 				src.locked = 0
 				src.idlock = 0
 				src.update_icon()
 			else
 				user << "\blue You swipe your ID, but the door just beeps at you..."
 				flick("door_deny", src)
-				return
+			return
 		else
 			user << "\blue You swipe your ID, and the door locks down, linked to your account number."
-			src.name = "Cabin Door ([W.registered_name])"
+			src.name = "[src.name] ([W.registered_name])"
 			src.linkedID = W.associated_account_number
 			src.idlock = 1
 			src.locked = 1
 			src.update_icon()
 			return
+		doorready = 1
 	else
 		..()
 	return
+
+/////////////////////////////////////////NEW BRIG TIMERS BY NAME//////////////////////////////////////////////////////////////////////////
+#define CHARS_PER_LINE 5
+#define FONT_SIZE "5pt"
+#define FONT_COLOR "#09f"
+#define FONT_STYLE "Arial Black"
+
+/obj/machinery/prisoner_timer
+	name = "Prisoner Timer"
+	icon = 'icons/obj/status_display.dmi'
+	icon_state = "frame"
+	desc = "A timer for prisoner brig duration."
+	req_access = list(access_brig)
+	anchored = 1.0    		// can't pick it up
+	density = 0       		// can walk through it.
+	layer = 4
+	var/id = null     		// id of door it controls.
+	var/releasetime = 0		// when world.timeofday reaches it - release the prisoner
+	var/timing = 1    		// boolean, true/1 timer is on, false/0 means it's not timing
+	var/picture_state		// icon_state of alert picture, if not displaying text/numbers
+	var/list/obj/machinery/targets = list()
+	var/timetoset = 0		// Used to set releasetime upon starting the timer
+	var/prisoner = "Empty"
+
+	maptext_height = 26
+	maptext_width = 32
+
+/obj/machinery/prisoner_timer/New()
+	..()
+
+	pixel_x = ((src.dir & 3)? (0) : (src.dir == 4 ? 32 : -32))
+	pixel_y = ((src.dir & 3)? (src.dir ==1 ? 24 : -32) : (0))
+	layer = 4
+	return
+
+
+//Main door timer loop, if it's timing and time is >0 reduce time by 1.
+// if it's less than 0, open door, reset timer
+// update the prisoner_timer window and the icon
+/obj/machinery/prisoner_timer/process()
+
+	if(stat & (NOPOWER|BROKEN))	return
+	if(src.timing)
+
+		// poorly done midnight rollover
+		// (no seriously there's gotta be a better way to do this)
+		var/timeleft = timeleft()
+		if(timeleft > 1e5)
+			src.releasetime = 0
+
+
+		if(world.timeofday > src.releasetime)
+			src.timer_end() // open doors, reset timer, clear status screen
+			src.timing = 1
+			releasetime = 0
+
+		src.updateUsrDialog()
+		src.update_icon()
+
+	else
+		timer_end()
+
+	return
+
+
+// has the door power situation changed, if so update icon.
+/obj/machinery/prisoner_timer/power_change()
+	..()
+	update_icon()
+	return
+
+
+// open/closedoor checks if prisoner_timer has power, if so it checks if the
+// linked door is open/closed (by density) then opens it/closes it.
+
+// Closes and locks doors, power check
+/obj/machinery/prisoner_timer/proc/timer_start()
+	if(stat & (NOPOWER|BROKEN))	return 0
+
+	// Set releasetime
+	releasetime = world.timeofday + timetoset
+
+
+// Opens and unlocks doors, power check
+/obj/machinery/prisoner_timer/proc/timer_end()
+	if(stat & (NOPOWER|BROKEN))	return 0
+
+	// Reset releasetime
+	releasetime = 0
+
+	return 1
+
+
+// Check for releasetime timeleft
+/obj/machinery/prisoner_timer/proc/timeleft()
+	. = (releasetime - world.timeofday)/10
+	if(. < 0)
+		. = 0
+
+// Set timetoset
+/obj/machinery/prisoner_timer/proc/timeset(var/seconds)
+	timetoset = seconds * 10
+
+	if(timetoset <= 0)
+		timetoset = 0
+
+	return
+
+//Allows AIs to use prisoner_timer, see human attack_hand function below
+/obj/machinery/prisoner_timer/attack_ai(var/mob/user as mob)
+	return src.attack_hand(user)
+
+
+//Allows humans to use prisoner_timer
+//Opens dialog window when someone clicks on door timer
+// Allows altering timer and the timing boolean.
+// Flasher activation limited to 150 seconds
+/obj/machinery/prisoner_timer/attack_hand(var/mob/user as mob)
+	if(..())
+		return
+
+	// Used for the 'time left' display
+	var/second = round(timeleft() % 60)
+	var/minute = round((timeleft() - second) / 60)
+
+	// Used for 'set timer'
+	var/setsecond = round((timetoset / 10) % 60)
+	var/setminute = round(((timetoset / 10) - setsecond) / 60)
+
+	user.set_machine(src)
+
+	// dat
+	var/dat = "<HTML><BODY><TT>"
+
+	dat += "<HR>Timer System:</hr>"
+	dat += " <b>Prisoner: [src.prisoner] </b><br/>"
+	dat += "<a href='?src=\ref[src];prisoner=1'>Set Prisoner Name</a>"
+	dat += " - <a href='?src=\ref[src];empty=1'><i>Empty</i></a><br/><hr>"
+
+	// Start/Stop timer
+	if (src.timing)
+		dat += "<a href='?src=\ref[src];timing=0'>Stop Timer</a><br/>"
+	else
+		dat += "<a href='?src=\ref[src];timing=1'>Activate Timer</a><br/>"
+
+	// Time Left display (uses releasetime)
+	dat += "Time Left: [(minute ? text("[minute]:") : null)][second] <br/>"
+	dat += "<br/>"
+
+	// Set Timer display (uses timetoset)
+	if(src.timing)
+		dat += "Set Timer: [(setminute ? text("[setminute]:") : null)][setsecond]  <a href='?src=\ref[src];change=1'>Set</a><br/>"
+	else
+		dat += "Set Timer: [(setminute ? text("[setminute]:") : null)][setsecond]<br/>"
+
+	// Controls
+	dat += "<a href='?src=\ref[src];tp=-60'>-</a> <a href='?src=\ref[src];tp=-1'>-</a> <a href='?src=\ref[src];tp=1'>+</a> <A href='?src=\ref[src];tp=60'>+</a><br/>"
+
+
+	dat += "<br/><br/><a href='?src=\ref[user];mach_close=computer'>Close</a>"
+	dat += "</TT></BODY></HTML>"
+
+	user << browse(dat, "window=computer;size=400x500")
+	onclose(user, "computer")
+	return
+
+
+//Function for using prisoner_timer dialog input, checks if user has permission
+// href_list to
+//  "timing" turns on timer
+//  "tp" value to modify timer
+//  "fc" activates flasher
+// 	"change" resets the timer to the timetoset amount while the timer is counting down
+// Also updates dialog window and timer icon
+/obj/machinery/prisoner_timer/Topic(href, href_list)
+	if(..())
+		return
+	if(!src.allowed(usr))
+		return
+
+	usr.set_machine(src)
+
+	if(href_list["timing"])
+		src.timing = text2num(href_list["timing"])
+
+		if(src.timing)
+			src.timer_start()
+		else
+			src.timer_end()
+
+	else
+		if(href_list["tp"])  //adjust timer, close door if not already closed
+			var/tp = text2num(href_list["tp"])
+			var/addtime = (timetoset / 10)
+			addtime += tp
+			addtime = min(max(round(addtime), 0), 3600)
+
+			timeset(addtime)
+
+		if(href_list["fc"])
+			for(var/obj/machinery/flasher/F in targets)
+				F.flash()
+
+		if(href_list["change"])
+			src.timer_start()
+
+		if(href_list["prisoner"])
+			prisoner = input("Please input Prisoner Name", name, prisoner) as text
+
+		if(href_list["empty"])
+			prisoner = "Empty"
+			src.timer_end()
+
+	src.add_fingerprint(usr)
+	src.updateUsrDialog()
+	src.update_icon()
+
+	/* if(src.timing)
+		src.timer_start()
+
+	else
+		src.timer_end() */
+
+	return
+
+
+//icon update function
+// if NOPOWER, display blank
+// if BROKEN, display blue screen of death icon AI uses
+// if timing=true, run update display function
+/obj/machinery/prisoner_timer/update_icon()
+	if(stat & (NOPOWER))
+		icon_state = "frame"
+		return
+	if(stat & (BROKEN))
+		set_picture("ai_bsod")
+		return
+	if(src.timing)
+		var/disp1 = prisoner
+		var/timeleft = timeleft()
+		var/disp2 = "[add_zero(num2text((timeleft / 60) % 60),2)]~[add_zero(num2text(timeleft % 60), 2)]"
+		if(length(disp2) > CHARS_PER_LINE)
+			disp2 = "Error"
+		update_display(disp1, disp2)
+	else
+		if(maptext)	maptext = ""
+	return
+
+
+// Adds an icon in case the screen is broken/off, stolen from status_display.dm
+/obj/machinery/prisoner_timer/proc/set_picture(var/state)
+	picture_state = state
+	overlays.Cut()
+	overlays += image('icons/obj/status_display.dmi', icon_state=picture_state)
+
+
+//Checks to see if there's 1 line or 2, adds text-icons-numbers/letters over display
+// Stolen from status_display
+/obj/machinery/prisoner_timer/proc/update_display(var/line1, var/line2)
+	var/new_text = {"<div style="font-size:[FONT_SIZE];color:[FONT_COLOR];font:'[FONT_STYLE]';text-align:center;" valign="top">[line1]<br>[line2]</div>"}
+	if(maptext != new_text)
+		maptext = new_text
+
+
+//Actual string input to icon display for loop, with 5 pixel x offsets for each letter.
+//Stolen from status_display
+/obj/machinery/prisoner_timer/proc/texticon(var/tn, var/px = 0, var/py = 0)
+	var/image/I = image('icons/obj/status_display.dmi', "blank")
+	var/len = lentext(tn)
+
+	for(var/d = 1 to len)
+		var/char = copytext(tn, len-d+1, len-d+2)
+		if(char == " ")
+			continue
+		var/image/ID = image('icons/obj/status_display.dmi', icon_state=char)
+		ID.pixel_x = -(d-1)*5 + px
+		ID.pixel_y = py
+		I.overlays += ID
+	return I
+
+
+#undef FONT_SIZE
+#undef FONT_COLOR
+#undef FONT_STYLE
+#undef CHARS_PER_LINE
 
 //////////////////////////DIRECTIONAL SIGNS//////////////////////////////////////////////////
 /obj/structure/sign/directions/directional/scienceN
