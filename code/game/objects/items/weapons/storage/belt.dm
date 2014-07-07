@@ -225,6 +225,6 @@
 		"/obj/item/device/radio/headset",
 		"/obj/item/weapon/melee",
 		"/obj/item/taperoll/police",
-		"/obj/item/weapon/gun/energy/taser"
-		"/obj/item/weapon/gun/projectile/SW40",
+		"/obj/item/weapon/gun/energy/taser",
+		"/obj/item/weapon/gun/projectile/SW40"
 		)
