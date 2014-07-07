@@ -1134,6 +1134,7 @@
 
 	pixel_x = ((src.dir & 3)? (0) : (src.dir == 4 ? 32 : -32))
 	pixel_y = ((src.dir & 3)? (src.dir ==1 ? 24 : -32) : (0))
+	layer = 4
 	return
 
 
