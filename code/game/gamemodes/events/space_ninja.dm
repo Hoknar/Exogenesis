@@ -216,7 +216,7 @@ Malf AIs/silicons aren't added. Monkeys aren't added. Messes with objective comp
 
 		var/datum/mind/ninja_mind = new_ninja.mind//For easier reference.
 		var/mission_set = 0//To determine if we need to do further processing.
-		//Xenos and deathsquads take precedence over everything else.
+		//Xenos and UHS Marines take precedence over everything else.
 
 		//Unless the xenos are hiding in a locker somewhere, this'll find em.
 		for(var/mob/living/carbon/alien/humanoid/xeno in player_list)
@@ -245,7 +245,7 @@ Malf AIs/silicons aren't added. Monkeys aren't added. Messes with objective comp
 
 			if(sent_strike_team&&side=="heel"&&antagonist_list.len)//If a strike team was sent, murder them all like a champ.
 				for(current_mind in antagonist_list)//Search and destroy. Since we already have an antagonist list, they should appear there.
-					if(current_mind && current_mind.special_role=="Death Commando")
+					if(current_mind && current_mind.special_role=="UHS Marine")
 						commando_list += current_mind
 				if(commando_list.len)//If there are living commandos still in play.
 					for(var/mob/living/carbon/human/commando in commando_list)

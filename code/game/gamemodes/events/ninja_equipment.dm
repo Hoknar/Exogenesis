@@ -1212,8 +1212,8 @@ ________________________________________________________________________________
 					U.client.images += image(tempHud,target,"hudalien")
 				if("Syndicate")
 					U.client.images += image(tempHud,target,"hudoperative")
-				if("Death Commando")
-					U.client.images += image(tempHud,target,"huddeathsquad")
+				if("UHS Marine")
+					U.client.images += image(tempHud,target,"huduhsmarine")
 				if("Ninja")
 					U.client.images += image(tempHud,target,"hudninja")
 				else//If we don't know what role they have but they have one.

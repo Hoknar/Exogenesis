@@ -519,7 +519,7 @@
 	icon_state = "fireripleytoy"
 
 /obj/item/toy/prize/deathripley
-	name = "toy deathsquad ripley"
+	name = "toy UHS Marines ripley"
 	desc = "Mini-Mecha action figure! Collect them all! 3/11."
 	icon_state = "deathripleytoy"
 

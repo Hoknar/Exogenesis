@@ -68,8 +68,8 @@ var/global/datum/tension/tension_master
 		 	"POINTS_FOR_NUKETEAM"		=	2,
 		 	"POINTS_FOR_ALIEN"			=	5,
 		 	"POINTS_FOR_NINJA"			=	3,
-		 	"POINTS_FOR_DEATHSQUAD"		=	2,
-		 	"POINTS_FOR_BORGDEATHSQUAD" =	2
+		 	"POINTS_FOR_UHSMARINE"		=	2,
+		 	"POINTS_FOR_BORGUHSMARINE" =	2
 			)
 
 		else
@@ -83,8 +83,8 @@ var/global/datum/tension/tension_master
 		 	"POINTS_FOR_NUKETEAM"		=	250000,
 		 	"POINTS_FOR_ALIEN"			=	200000,
 		 	"POINTS_FOR_NINJA"			=	200000,
-		 	"POINTS_FOR_DEATHSQUAD"		=	500000,
-		 	"POINTS_FOR_BORGDEATHSQUAD" =	500000
+		 	"POINTS_FOR_UHSMARINE"		=	500000,
+		 	"POINTS_FOR_BORGUHSMARINE" =	500000
 			)
 
 	proc/process()
@@ -185,14 +185,14 @@ var/global/datum/tension/tension_master
 												else
 													potentialgames.Remove(thegame)
 
-											if("POINTS_FOR_DEATHSQUAD")
-												if(!makeDeathsquad())
+											if("POINTS_FOR_UHSMARINE")
+												if(!makeUHSMarine())
 													forcenexttick = 1
 												else
 													potentialgames.Remove(thegame)
 
-											if("POINTS_FOR_BORG_DEATHSQUAD")
-												if(!makeBorgDeathsquad())
+											if("POINTS_FOR_BORG_UHSMARINE")
+												if(!makeBorgUHSMarine())
 													forcenexttick = 1
 												else
 													potentialgames.Remove(thegame)
@@ -273,11 +273,11 @@ var/global/datum/tension/tension_master
 		else if (href_list["makeSpaceNinja"])
 			makeSpaceNinja()
 
-		else if (href_list["makeDeathsquad"])
-			makeDeathsquad()
+		else if (href_list["makeUHSMarine"])
+			makeUHSMarine()
 
-		else if (href_list["makeBorgDeathsquad"])
-			makeBorgDeathsquad()
+		else if (href_list["makeBorgUHSMarine"])
+			makeBorgUHSMarine()
 
 		else if (href_list["Supress"])
 			supress = 1
@@ -610,7 +610,7 @@ var/global/datum/tension/tension_master
 		space_ninja_arrival()
 		return 1
 
-	proc/makeDeathsquad()
+	proc/makeUHSMarine()
 		var/list/mob/dead/observer/candidates = list()
 		var/mob/dead/observer/theghost = null
 		var/time_passed = world.time
@@ -692,7 +692,7 @@ var/global/datum/tension/tension_master
 		return 1 // Has to return one before it knows if there's a wizard to prevent the parent from automatically selecting another game mode.
 
 
-	proc/makeBorgDeathsquad()
+	proc/makeBorgUHSMarine()
 		var/list/mob/dead/observer/candidates = list()
 		var/mob/dead/observer/theghost = null
 		var/time_passed = world.time
@@ -719,15 +719,15 @@ var/global/datum/tension/tension_master
 			var/numagents = 3
 
 			//Spawns commandos and equips them.
-			for (var/obj/effect/landmark/L in /area/borg_deathsquad)
+			for (var/obj/effect/landmark/L in /area/borg_UHSMarine)
 				if(numagents<=0)
 					break
-				if (L.name == "Borg-Deathsquad")
+				if (L.name == "Borg-UHS Marine")
 
 					var/name = pick(namelist)
 					namelist.Remove(name)
 
-					var/mob/living/silicon/robot/new_borg_deathsquad = create_borg_death_commando(L, name)
+					var/mob/living/silicon/robot/new_borg_UHSMarine = create_borg_death_commando(L, name)
 
 
 
@@ -736,15 +736,15 @@ var/global/datum/tension/tension_master
 						candidates.Remove(theghost)
 
 					if(!theghost)
-						del(new_borg_deathsquad)
+						del(new_borg_UHSMarine)
 						break
 
-					new_borg_deathsquad.key = theghost.key
+					new_borg_UHSMarine.key = theghost.key
 
 					//So they don't forget their code or mission.
 
 
-					new_borg_deathsquad << "You are a borg deathsquad operative.  Follow your laws."
+					new_borg_UHSMarine << "You are a borg UHS Marine operative.  Follow your laws."
 					numagents--
 
 		//Spawns the rest of the commando gear.
@@ -815,20 +815,20 @@ var/global/datum/tension/tension_master
 
 	/proc/create_borg_death_commando(obj/spawn_location, name)
 
-		var/mob/living/silicon/robot/new_borg_deathsquad = new(spawn_location.loc, 1)
+		var/mob/living/silicon/robot/new_borg_UHSMarine = new(spawn_location.loc, 1)
 
-		new_borg_deathsquad.real_name = name
-		new_borg_deathsquad.name = name
+		new_borg_UHSMarine.real_name = name
+		new_borg_UHSMarine.name = name
 
 		//Creates mind stuff.
-		new_borg_deathsquad.mind_initialize()
-		new_borg_deathsquad.mind.assigned_role = "MODE"
-		new_borg_deathsquad.mind.special_role = "Borg Commando"
+		new_borg_UHSMarine.mind_initialize()
+		new_borg_UHSMarine.mind.assigned_role = "MODE"
+		new_borg_UHSMarine.mind.special_role = "Borg Commando"
 
 		//Adds them to current traitor list. Which is really the extra antagonist list.
-		ticker.mode.traitors += new_borg_deathsquad.mind
+		ticker.mode.traitors += new_borg_UHSMarine.mind
 		//del(spawn_location)  // Commenting this out for multiple commando teams.
-		return new_borg_deathsquad
+		return new_borg_UHSMarine
 
 
 
@@ -846,9 +846,9 @@ var/global/datum/tension/tension_master
 /obj/machinery/computer/Borg_station/attack_hand()
 	if(jumpcomplete)
 		return
-	if(alert(usr, "Are you sure you want to send a cyborg deathsquad?", "Confirmation", "Yes", "No") == "Yes")
-		var/area/start_location = locate(/area/borg_deathsquad/start)
-		var/area/end_location = locate(/area/borg_deathsquad/station)
+	if(alert(usr, "Are you sure you want to send a cyborg UHS Marine?", "Confirmation", "Yes", "No") == "Yes")
+		var/area/start_location = locate(/area/borg_UHSMarine/start)
+		var/area/end_location = locate(/area/borg_UHSMarine/station)
 
 		var/list/dstturfs = list()
 		var/throwy = world.maxy

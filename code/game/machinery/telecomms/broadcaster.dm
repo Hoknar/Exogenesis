@@ -435,7 +435,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 				if(1359)
 					blackbox.msg_security += blackbox_msg
 				if(1341)
-					blackbox.msg_deathsquad += blackbox_msg
+					blackbox.msg_uhsmarine += blackbox_msg
 				if(1213)
 					blackbox.msg_syndicate += blackbox_msg
 				if(1347)
@@ -709,7 +709,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 				if(1359)
 					blackbox.msg_security += blackbox_msg
 				if(1341)
-					blackbox.msg_deathsquad += blackbox_msg
+					blackbox.msg_uhsmarine += blackbox_msg
 				if(1213)
 					blackbox.msg_syndicate += blackbox_msg
 				if(1347)

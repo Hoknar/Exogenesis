@@ -81,7 +81,7 @@
 	siemens_coefficient = 0.5
 
 
-/obj/item/clothing/suit/armor/swat/officer
+/obj/item/clothing/suit/armor/uhsmarine/officer
 	name = "officer jacket"
 	desc = "An armored jacket used in special operations."
 	icon_state = "detective"

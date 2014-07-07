@@ -543,7 +543,7 @@ var/GLOBAL_RADIO_TYPE = 1 // radio type to use
 					if(1359)
 						blackbox.msg_security += blackbox_msg
 					if(1341)
-						blackbox.msg_deathsquad += blackbox_msg
+						blackbox.msg_uhsmarine += blackbox_msg
 					if(1213)
 						blackbox.msg_syndicate += blackbox_msg
 					if(1349)

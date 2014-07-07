@@ -1703,8 +1703,8 @@
 					holder.icon_state = "hudchangeling"
 				if("Wizard","Fake Wizard")
 					holder.icon_state = "hudwizard"
-				if("Death Commando")
-					holder.icon_state = "huddeathsquad"
+				if("UHS Marine")
+					holder.icon_state = "huduhsmarine"
 				if("Ninja")
 					holder.icon_state = "hudninja"
 

@@ -6,7 +6,7 @@
 	var/const/gamelength = 15 * 600 // 1/10 second
 
 	announce()
-		world << "<B>The current game mode is - Death Commando Deathmatch!</B>"
+		world << "<B>The current game mode is - UHS Marine Deathmatch!</B>"
 		world << "<B>Just kill everyone else. They're gonna try to kill you, after all. Respawning is enabled.</B>"
 
 	post_setup()
@@ -32,7 +32,7 @@
 					if(commando_names.len)
 						randomname = pick(commando_names)
 						commando_names -= randomname
-					var/newname = input(M,"You are a death commando. Would you like to change your name?", "Character Creation", randomname)
+					var/newname = input(M,"You are a UHS Marine. Would you like to change your name?", "Character Creation", randomname)
 					if(!length(newname))
 						newname = randomname
 					newname = strip_html(newname,40)
@@ -56,8 +56,8 @@
 
 					var/obj/item/weapon/card/id/W = new(M)
 					W.access = get_all_accesses()
-					W.name = "[newname]'s ID card (Death Commando)"
-					W.assignment = "Death Commando"
+					W.name = "[newname]'s ID card (UHS Marine)"
+					W.assignment = "UHS Marine"
 					W.registered_name = newname
 					M.equip_to_slot_or_del(W, slot_wear_id)
 		..()

@@ -29,7 +29,7 @@
 
 //UHS suit
 /obj/item/clothing/head/helmet/space/uhsmarine
-	name = "deathsquad helmet"
+	name = "UHS Helmet"
 	desc = "That's not red paint. That's real blood."
 	icon_state = "deathsquad"
 	item_state = "deathsquad"
