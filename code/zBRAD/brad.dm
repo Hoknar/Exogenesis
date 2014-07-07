@@ -1155,7 +1155,8 @@
 
 		if(world.timeofday > src.releasetime)
 			src.timer_end() // open doors, reset timer, clear status screen
-			src.timing = 0
+			src.timing = 1
+			releasetime = 0
 
 		src.updateUsrDialog()
 		src.update_icon()
