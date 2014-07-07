@@ -187,3 +187,11 @@
 	item_state = "jensencoat"
 	flags_inv = 0
 	siemens_coefficient = 0.6
+
+/obj/item/clothing/under/uhsmarine
+	desc = "You never asked for anything that stylish."
+	name = "Nanoweave Jumpsuit"
+	icon_state = "jensen"
+	item_state = "jensen"
+	item_color = "jensen"
+	siemens_coefficient = 0.6

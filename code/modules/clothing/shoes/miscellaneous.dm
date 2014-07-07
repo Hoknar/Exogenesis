@@ -15,14 +15,6 @@
 	icon_state = "mime"
 	item_color = "mime"
 
-/obj/item/clothing/shoes/swat
-	name = "\improper SWAT shoes"
-	desc = "When you want to turn up the heat."
-	icon_state = "swat"
-	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
-	flags = NOSLIP
-	siemens_coefficient = 0.6
-
 /obj/item/clothing/shoes/combat //Basically SWAT shoes combined with galoshes.
 	name = "combat boots"
 	desc = "When you REALLY want to turn up the heat"

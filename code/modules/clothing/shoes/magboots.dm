@@ -4,7 +4,7 @@
 	icon_state = "magboots0"
 	species_restricted = null
 	var/magpulse = 0
-//	flags = NOSLIP //disabled by default
+	flags = NOSLIP //disabled by default
 
 
 	verb/toggle()
@@ -35,3 +35,16 @@
 		if(src.flags&NOSLIP)
 			state = "enabled"
 		usr << "Its mag-pulse traction system appears to be [state]."
+
+/obj/item/clothing/shoes/magboots/uhsmarine
+	name = "Combat Boots"
+	desc = "When you REALLY want to turn up the heat"
+	icon_state = "swat"
+	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
+	flags = NOSLIP
+	siemens_coefficient = 0.6
+
+	cold_protection = FEET
+	min_cold_protection_temperature = SHOE_MIN_COLD_PROTECTION_TEMPERATURE
+	heat_protection = FEET
+	max_heat_protection_temperature = SHOE_MAX_HEAT_PROTECTION_TEMPERATURE

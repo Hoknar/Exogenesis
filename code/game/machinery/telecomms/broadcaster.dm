@@ -288,7 +288,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 
 		if(istype(R, /mob/new_player)) // we don't want new players to hear messages. rare but generates runtimes.
 			continue
-			
+
 		// Ghosts hearing all radio chat don't want to hear syndicate intercepts, they're duplicates
 		if(data == 3 && istype(R, /mob/dead/observer) && R.client && (R.client.prefs.toggles & CHAT_GHOSTRADIO))
 			continue
@@ -434,7 +434,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 					blackbox.msg_engineering += blackbox_msg
 				if(1359)
 					blackbox.msg_security += blackbox_msg
-				if(1441)
+				if(1341)
 					blackbox.msg_deathsquad += blackbox_msg
 				if(1213)
 					blackbox.msg_syndicate += blackbox_msg
@@ -708,7 +708,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 					blackbox.msg_engineering += blackbox_msg
 				if(1359)
 					blackbox.msg_security += blackbox_msg
-				if(1441)
+				if(1341)
 					blackbox.msg_deathsquad += blackbox_msg
 				if(1213)
 					blackbox.msg_syndicate += blackbox_msg

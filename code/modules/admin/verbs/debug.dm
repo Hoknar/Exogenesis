@@ -545,7 +545,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		"tunnel clown",
 		"masked killer",
 		"assassin",
-		"death commando",
+		"UHS Marine",
 		"syndicate commando",
 		"special ops officer",
 		"blue wizard",
@@ -737,7 +737,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
 
-		if("death commando")//Was looking to add this for a while.
+		if("UHS Marine")//Was looking to add this for a while.
 			M.equip_death_commando()
 
 		if("syndicate commando")

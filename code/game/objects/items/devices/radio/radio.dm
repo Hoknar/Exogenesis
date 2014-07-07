@@ -542,7 +542,7 @@ var/GLOBAL_RADIO_TYPE = 1 // radio type to use
 						blackbox.msg_engineering += blackbox_msg
 					if(1359)
 						blackbox.msg_security += blackbox_msg
-					if(1441)
+					if(1341)
 						blackbox.msg_deathsquad += blackbox_msg
 					if(1213)
 						blackbox.msg_syndicate += blackbox_msg
@@ -755,10 +755,10 @@ var/GLOBAL_RADIO_TYPE = 1 // radio type to use
 				continue
 			src.channels += ch_name
 			src.channels[ch_name] += keyslot.channels[ch_name]
-			
+
 		if(keyslot.syndie)
 			src.syndie = 1
-	
+
 
 	for (var/ch_name in src.channels)
 		if(!radio_controller)

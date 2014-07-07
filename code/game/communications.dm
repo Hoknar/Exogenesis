@@ -72,7 +72,7 @@ Radio:
 1355 - Medical
 1357 - Engineering
 1359 - Security
-1441 - death squad
+1341 - UHS
 1443 - Confession Intercom
 1347 - Cargo techs
 
@@ -104,7 +104,7 @@ var/list/radiochannels = list(
 	"Engineering" = 1357,
 	"Security" = 1359,
 	"Response Team" = 1345,
-	"Deathsquad" = 1341,
+	"UHS" = 1341,
 	"Syndicate" = 1213,
 	"Supply" = 1347,
 )

@@ -156,6 +156,14 @@
 	item_state = "headset"
 	keyslot2 = new /obj/item/device/encryptionkey/headset_cargo
 
+/obj/item/device/radio/headset/uhs
+	name = "UHS Radio Headset"
+	desc = "A headset used by the UHS."
+	icon_state = "com_headset"
+	item_state = "headset"
+	freerange = 1
+	keyslot2 = new /obj/item/device/encryptionkey/uhs
+
 /obj/item/device/radio/headset/ert
 	name = "CentCom Response Team headset"
 	desc = "The headset of the boss's boss. Channels are as follows: :h - Response Team :c - command, :s - security, :e - engineering, :d - mining, :q - cargo, :m - medical, :n - science."
