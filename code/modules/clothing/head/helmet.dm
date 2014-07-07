@@ -36,9 +36,9 @@
 	flags_inv = HIDEEARS
 	siemens_coefficient = 0.7
 
-/obj/item/clothing/head/helmet/uhsmarine
-	name = "\improper UHS helmet"
-	desc = "They're often used by highly trained UHS Members."
+/obj/item/clothing/head/helmet/syndicate
+	name = "\improper Syndicate Helmet"
+	desc = "They're often used by highly trained Syndicates."
 	icon_state = "swat"
 	flags = FPRINT | TABLEPASS | HEADCOVERSEYES
 	item_state = "swat"
