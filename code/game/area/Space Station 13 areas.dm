@@ -1347,6 +1347,14 @@ var/list/ghostteleportlocs = list()
 	name = "Hydroponics"
 	icon_state = "hydro"
 
+/area/hydroponics/garden
+	name = "Garden"
+	icon_state = "hydro"
+
+/area/hydroponics/gardenb
+	name = "Garden Backroom"
+	icon_state = "hydro"
+
 //Toxins
 
 /area/toxins/lab
