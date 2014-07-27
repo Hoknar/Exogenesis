@@ -16,9 +16,9 @@
 	item_state = "r_hands"
 	siemens_coefficient = 1.0
 
-/obj/item/clothing/gloves/swat
+/obj/item/clothing/gloves/uhsmarine
 	desc = "These tactical gloves are somewhat fire and impact-resistant."
-	name = "\improper SWAT Gloves"
+	name = "\improper UHS Gloves"
 	icon_state = "black"
 	item_state = "swat_gl"
 	siemens_coefficient = 0.6

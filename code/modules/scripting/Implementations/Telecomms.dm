@@ -69,6 +69,7 @@
 		interpreter.SetVar("$engineering",1357)
 		interpreter.SetVar("$security",	1359)
 		interpreter.SetVar("$supply",	1347)
+		interpreter.SetVar("$uhs",	1341)
 
 		// Signal data
 

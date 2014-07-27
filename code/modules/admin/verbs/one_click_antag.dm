@@ -20,13 +20,13 @@ client/proc/one_click_antag()
 		<a href='?src=\ref[src];makeAntag=11'>Make Vox Raiders (Requires Ghosts)</a><br>
 		"}
 /* These dont work just yet
-	Ninja, aliens and deathsquad I have not looked into yet
+	Ninja, aliens and UHS Marine I have not looked into yet
 	Nuke team is getting a null mob returned from makebody() (runtime error: null.mind. Line 272)
 
 		<a href='?src=\ref[src];makeAntag=7'>Make Nuke Team (Requires Ghosts)</a><br>
 		<a href='?src=\ref[src];makeAntag=8'>Make Space Ninja (Requires Ghosts)</a><br>
 		<a href='?src=\ref[src];makeAntag=9'>Make Aliens (Requires Ghosts)</a><br>
-		<a href='?src=\ref[src];makeAntag=10'>Make Deathsquad (Syndicate) (Requires Ghosts)</a><br>
+		<a href='?src=\ref[src];makeAntag=10'>Make UHS Marine (Syndicate) (Requires Ghosts)</a><br>
 		"}
 */
 	usr << browse(dat, "window=oneclickantag;size=400x400")
@@ -314,7 +314,7 @@ client/proc/one_click_antag()
 	space_ninja_arrival()
 	return 1
 
-/datum/admins/proc/makeDeathsquad()
+/datum/admins/proc/makeUHSMarine()
 	var/list/mob/dead/observer/candidates = list()
 	var/mob/dead/observer/theghost = null
 	var/time_passed = world.time

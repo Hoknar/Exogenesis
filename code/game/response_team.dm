@@ -284,8 +284,8 @@ proc/trigger_armed_response_team(var/force = 0)
 
 	//Replaced with new ERT uniform
 	equip_to_slot_or_del(new /obj/item/clothing/under/rank/centcom_officer(src), slot_w_uniform)
-	equip_to_slot_or_del(new /obj/item/clothing/shoes/swat(src), slot_shoes)
-	equip_to_slot_or_del(new /obj/item/clothing/gloves/swat(src), slot_gloves)
+	equip_to_slot_or_del(new /obj/item/clothing/shoes/combat(src), slot_shoes)
+	equip_to_slot_or_del(new /obj/item/clothing/gloves/combat(src), slot_gloves)
 	equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(src), slot_glasses)
 	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel(src), slot_back)
 /*
@@ -307,7 +307,7 @@ proc/trigger_armed_response_team(var/force = 0)
 
 	//Removed
 //	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/swat(src), slot_wear_suit)
-//	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/deathsquad(src), slot_head)
+//	equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/uhsmarine(src), slot_head)
 
 	//Backpack
 	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/security(src), slot_back)

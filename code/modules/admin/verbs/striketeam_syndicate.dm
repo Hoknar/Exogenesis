@@ -133,12 +133,12 @@ var/global/sent_syndicate_strike_team = 0
 	R.set_frequency(SYND_FREQ) //Same frequency as the syndicate team in Nuke mode.
 	equip_to_slot_or_del(R, slot_l_ear)
 	equip_to_slot_or_del(new /obj/item/clothing/under/syndicate(src), slot_w_uniform)
-	equip_to_slot_or_del(new /obj/item/clothing/shoes/swat(src), slot_shoes)
+	equip_to_slot_or_del(new /obj/item/clothing/shoes/combat(src), slot_shoes)
 	if (!syndicate_leader_selected)
 		equip_to_slot_or_del(new /obj/item/clothing/suit/space/syndicate/black(src), slot_wear_suit)
 	else
 		equip_to_slot_or_del(new /obj/item/clothing/suit/space/syndicate/black/red(src), slot_wear_suit)
-	equip_to_slot_or_del(new /obj/item/clothing/gloves/swat(src), slot_gloves)
+	equip_to_slot_or_del(new /obj/item/clothing/gloves/combat(src), slot_gloves)
 	if (!syndicate_leader_selected)
 		equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/syndicate/black(src), slot_head)
 	else

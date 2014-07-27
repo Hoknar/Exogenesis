@@ -122,6 +122,11 @@
 	icon_state = "cargo_cypherkey"
 	channels = list("Supply" = 1)
 
+/obj/item/device/encryptionkey/uhs
+	name = "UHS Radio Encryption Key"
+	desc = "An UHS encryption key. You shouldn't have this."
+	channels = list("UHS" = 1)
+
 /obj/item/device/encryptionkey/ert
 	name = "NanoTrasen ERT Radio Encryption Key"
 	desc = "An encyption key for a radio headset.  Contains cypherkeys."

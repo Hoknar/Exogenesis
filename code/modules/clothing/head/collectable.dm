@@ -113,6 +113,6 @@
 
 /obj/item/clothing/head/collectable/swat
 	name = "collectable SWAT helmet"
-	desc = "Now you can be in the Deathsquad too!"
+	desc = "Now you can be in the Syndicate too!"
 	icon_state = "swat"
 	item_state = "swat"

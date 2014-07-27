@@ -278,7 +278,7 @@
 			return list(access_cent_general, access_cent_living)
 		if("Medical Officer")
 			return list(access_cent_general, access_cent_living, access_cent_medical)
-		if("Death Commando")
+		if("UHS Marine")
 			return list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
 		if("Research Officer")
 			return list(access_cent_general, access_cent_specops, access_cent_medical, access_cent_teleporter, access_cent_storage)
@@ -502,7 +502,7 @@
 				"Research Director", "Scientist", "Head of Security", "Warden", "Detective", "Security Officer")
 
 /proc/get_all_centcom_jobs()
-	return list("VIP Guest","Custodian","Thunderdome Overseer","Intel Officer","Medical Officer","Death Commando","Research Officer","BlackOps Commander","Supreme Commander")
+	return list("VIP Guest","Custodian","Thunderdome Overseer","Intel Officer","Medical Officer","UHS Marine","Research Officer","BlackOps Commander","Supreme Commander")
 
 /obj/proc/GetJobName()
 	if (!istype(src, /obj/item/device/pda) && !istype(src,/obj/item/weapon/card/id))

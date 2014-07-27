@@ -143,8 +143,8 @@
 					new /obj/item/clothing/under/psyche(C)
 				else
 					new /obj/item/clothing/under/syndicate/combat(C)
-					new /obj/item/clothing/shoes/swat(C)
-					new /obj/item/clothing/gloves/swat(C)
+					new /obj/item/clothing/shoes/combat(C)
+					new /obj/item/clothing/gloves/combat(C)
 					new /obj/item/clothing/mask/balaclava(C)
 			if("glasses")
 				var/obj/structure/closet/C = new(src.loc)

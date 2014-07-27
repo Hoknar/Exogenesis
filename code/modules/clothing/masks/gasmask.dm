@@ -19,8 +19,8 @@
 	item_state = "gas_mask"
 	armor = list(melee = 0, bullet = 0, laser = 2,energy = 2, bomb = 0, bio = 75, rad = 0)
 
-/obj/item/clothing/mask/gas/swat
-	name = "\improper SWAT mask"
+/obj/item/clothing/mask/gas/uhsmarine
+	name = "\improper UHS mask"
 	desc = "A close-fitting tactical mask that can be connected to an air supply."
 	icon_state = "swat"
 	siemens_coefficient = 0.7
@@ -78,7 +78,7 @@
 	item_state = "sexymime"
 
 /obj/item/clothing/mask/gas/death_commando
-	name = "Death Commando Mask"
+	name = "UHS Marine Mask"
 	icon_state = "death_commando_mask"
 	item_state = "death_commando_mask"
 	siemens_coefficient = 0.2

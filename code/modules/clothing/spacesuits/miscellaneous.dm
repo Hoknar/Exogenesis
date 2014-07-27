@@ -27,16 +27,16 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.7
 
-//Deathsquad suit
-/obj/item/clothing/head/helmet/space/deathsquad
-	name = "deathsquad helmet"
+//UHS suit
+/obj/item/clothing/head/helmet/space/uhsmarine
+	name = "UHS Helmet"
 	desc = "That's not red paint. That's real blood."
 	icon_state = "deathsquad"
 	item_state = "deathsquad"
 	armor = list(melee = 65, bullet = 55, laser = 35,energy = 20, bomb = 30, bio = 30, rad = 30)
 	siemens_coefficient = 0.2
 
-/obj/item/clothing/head/helmet/space/deathsquad/beret
+/obj/item/clothing/head/helmet/space/uhsmarine/beret
 	name = "officer's beret"
 	desc = "An armored beret commonly used by special operations officers."
 	icon_state = "beret_badge"
