@@ -914,18 +914,21 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			if(linked_imprinter.uranium_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=uranium;imprinter_ejectsheet_amt=1'>(1 Sheet)</A> "
 			if(linked_imprinter.uranium_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=uranium;imprinter_ejectsheet_amt=5'>(5 Sheets)</A> "
 			if(linked_imprinter.uranium_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=uranium;imprinter_ejectsheet_amt=50'>(Max Sheets)</A>"
+			dat += "<BR>"
 			//Silver
 			dat += "* [linked_imprinter.silver_amount] cm<sup>3</sup> of Silver || "
 			dat += "Eject: "
 			if(linked_imprinter.silver_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=silver;imprinter_ejectsheet_amt=1'>(1 Sheet)</A> "
 			if(linked_imprinter.silver_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=silver;imprinter_ejectsheet_amt=5'>(5 Sheets)</A> "
 			if(linked_imprinter.silver_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=silver;imprinter_ejectsheet_amt=50'>(Max Sheets)</A>"
+			dat += "<BR>"
 			//Plasma
 			dat += "* [linked_imprinter.plasma_amount] cm<sup>3</sup> of Plasma || "
 			dat += "Eject: "
 			if(linked_imprinter.plasma_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=plasma;imprinter_ejectsheet_amt=1'>(1 Sheet)</A> "
 			if(linked_imprinter.plasma_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=plasma;imprinter_ejectsheet_amt=5'>(5 Sheets)</A> "
 			if(linked_imprinter.plasma_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=plasma;imprinter_ejectsheet_amt=50'>(Max Sheets)</A>"
+			dat += "<BR>"
 
 	user << browse("<TITLE>Research and Development Console</TITLE><HR>[dat]", "window=rdconsole;size=575x400")
 	onclose(user, "rdconsole")
